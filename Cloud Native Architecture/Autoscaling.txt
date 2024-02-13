@@ -1,0 +1,9 @@
+- To achieve cloud native autoscaling, three factors are essential:
+1. Both the application and the infrastructure must be designed to scale effectively.
+2. Autoscaling must be automatic.
+3. Autoscaling must be bidirectional; to scale up and down
+
+- Kubernetes provides three autoscaling types:
+1. Horizontal Pod Autoscaler
+2. Vertical Pod Autoscaler
+3. Cluster Autoscaler

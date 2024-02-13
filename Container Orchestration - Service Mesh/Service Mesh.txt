@@ -1,0 +1,14 @@
+- Service Mesh is a dedicated and configurable infrastructure layer that handles the communication between
+ services without having to change the code in microservices architecture
+
+- With a service mesh, you can dynamically configure how services talk to each other.
+  - You'll have a mutual TLS
+
+- Service Mesh responsible for:
+ - Traffic Management
+ - Security
+ - Observability
+ - Service Discovery
+   - Discovery
+   - Health Check
+   - Load Balancing

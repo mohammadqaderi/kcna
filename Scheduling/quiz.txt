@@ -1,0 +1,153 @@
+Q-1: What does the taint effect “NoSchedule” indicate in Kubernetes?
+ Solution: Pods will not be scheduled on the node.
+
+Q-2: How do you specify labels in a Kubernetes pod definition file?
+ Solution: Use the “labels” field under the “metadata” section and provide labels in a key-value format.
+
+Q-3: Which command should be used to obtain detailed information about a specific DaemonSet in Kubernetes?
+ Solution: kubectl describe daemonsets <daemon-name>
+
+Q-4: How do you label a node in Kubernetes?
+ Solution: kubectl label nodes <node_name> <label-key>=<label-value>
+
+Q-5: The Kubernetes API server is aware of the static pods created by the kubelet.
+ Solution: True
+
+Q-6: What is the purpose of using taints and tolerations in Kubernetes?
+ Solution: To set restrictions on which pods can be scheduled on specific nodes
+
+Q-7: What does the taint effect “PreferNoSchedule” indicate in Kubernetes?
+ Solution: System will try to avoid placing a pod on the node, but it is not guaranteed.
+
+Q-8: What does the taint effect “NoExecute” indicate in Kubernetes?
+ Solution: Pods will be evicted immediately from the node, if they do not tolerate the taint
+
+Q-9: What is the default resource limit set by Kubernetes for containers?
+ Solution: 1 vCPU and 512 Megabytes
+
+Q-10: How can you select pods based on labels using the kubectl command?
+ Solution: Use the kubectl get pods --selector command followed by the label key-value pair.
+
+Q-11: How can you modify the resource requests for a pod in Kubernetes?
+ Solution: Specify the new values in the pod or deployment definition file under the “resources” section.
+
+Q-12: What is the term used for the pods that are created by the kubelet independently, without any involvement from the API
+ server or other Kubernetes cluster components?
+ Solution: Static pods
+
+Q-13: When using the kubelet alone, without involving other Kubernetes control plane components, it is possible to create
+ replicas, deployments, or services.
+ Solution: False
+
+Q-14: What is one way to manually assign a node to an existing pod in Kubernetes by mimicking the behavior of the scheduler?
+ Solution: Create a binding object with the target node’s name and send a post request to the pod’s binding API.
+
+Q-15: What is the purpose of the NodeName field in a Kubernetes pod?
+ Solution: It represents the name of the node where the pod is scheduled to run.
+
+Q-16: Which Kubernetes resource ensures that a copy of a pod is automatically added to each node in
+ a cluster, including newly added nodes?
+ Solution: DaemonSet
+
+Q-17: What is the key distinction between a DaemonSet and a ReplicaSet?
+ Solution: A DaemonSet ensures that a copy of a pod runs on every node in a Kubernetes cluster, while a ReplicaSet maintains
+ a specified number of pod replicas across the cluster.
+
+Q-18: How is 1 count of CPU (1 CPU) defined in Kubernetes?
+ Solution: All the options are valid
+ - It refers to 1 Hyperthread.
+ - It refers to 1 core in GCP or Azure.
+ - It refers to 1 vCPU in AWS.
+
+Q-19: What is the minimum value that can be set for CPU resource requests in Kubernetes?
+ Solution: 1m CPU
+
+Q-20: What is the primary purpose of using annotations in Kubernetes?
+ Solution: To record additional details or metadata for informational purposes
+
+Q-21: Which command can be used to display all the created DaemonSets in a Kubernetes cluster?
+ Solution: kubectl get daemonsets
+
+Q-22: Which of the following is a suitable use case for deploying a DaemonSet in Kubernetes?
+ Solution: Deploying a monitoring agent or log collector on each node in the cluster
+
+Q-23: What approach can be used to specify the path for static pod definition files when not directly
+ specifying it in the kubelet.service file?
+ Solution: Creating a separate config file and defining the directory path as ‘staticPodPath’
+
+Q-24: How can you ensure complete dedication of nodes for specific pods in Kubernetes?
+ Solution: By using a combination of taints, tolerations, and node affinity rules
+
+Q-25: How can you limit a pod to run on a specific node in Kubernetes?
+ Solution: Add a label to the node and use nodeSelector in the pod’s spec section.
+
+Q-26: What does the type of node affinity in Kubernetes define?
+ Solution: The behavior of the scheduler in relation to node affinity and the stages of the pod lifecycle.
+
+Q-27: What are the key distinctions between static pods and DaemonSets in Kubernetes?
+ Solution: All the options are valid
+ - Static pods can be used to deploy control plane nodes, while DaemonSets are suitable for deploying monitoring or logging agents on each node.
+ - Static pods are created using kubelet, while DaemonSets utilize kubeapi-server.
+ - Both static pods and DaemonSets are ignored by the kube-scheduler.
+
+Q-28: Which statement accurately describes the behavior of a static pod in a Kubernetes cluster?
+ Solution: When a kubelet creates a static pod, it also creates a read-only mirror object in the Kube API server.
+
+Q-29: What are the two types of node affinity available in Kubernetes?
+ Solution: requiredDuringSchedulingIgnoredDuringExecution, preferredDuringSchedulingIgnoredDuringExecution
+
+Q-30: The kubectl utility relies on the presence of the Kubernetes API server, and if the API server is
+ not available, kubectl commands will not work.
+ Solution: True
+
+Q-31: What is a potential use case for static pods in a Kubernetes cluster?
+ Solution: Deploying control plane components as pods on the master nodes
+
+Q-32: What limitation exists when using NodeSelectors in Kubernetes?
+ Solution: NodeSelectors can only handle simple queries and cannot handle complex queries like OR or NOT.
+
+Q-33: How can you taint a node in Kubernetes using the kubectl command?
+ Solution: kubectl taint nodes node-name key=value:taint-effect
+
+Q-34: What is the difference between “Gigabyte (GB)” and “Gibibyte (GiB)” in terms of their size?
+ Solution: Gigabyte (GB) refers to 1000 Megabytes, while Gibibyte (GiB) refers to 1024 Mebibytes.
+
+Q-35: What is the default assumption made by Kubernetes regarding the resource request for a container?
+ Solution: 0.5 CPU and 256 MiB memory
+
+Q-36: What can be done to manually schedule a pod to a specific node in Kubernetes when there is
+ no scheduler monitoring and scheduling the nodes?
+ Solution: Set the NodeName field in the pod manifest to the desired node name.
+
+Q-37: Which of the following is a taint effect in Kubernetes?
+ Solution: NoSchedule
+
+Q-38: In Kubernetes, what mechanism allows you to filter and view different objects based on categories or criteria,
+ such as their type, application, or functionality?
+ Solution: Labels and selectors
+
+Q-39: Where are the labels defined for the pods in a ReplicaSet?
+ Solution: Under the template section of the Replicaset definition file.
+
+Q-40: To connect a ReplicaSet to the desired pods, which field in the ReplicaSet specification is used to
+ match the labels defined on the pod?
+ Solution: selector
+
+Q-41: What do the labels at the top of a Replicaset definition file represent?
+ Solution: Labels of the Replicaset itself.
+
+Q-42: What is the purpose of taints and tolerations in Kubernetes?
+ Solution: Taints are added to nodes to define which pods they can tolerate, while tolerations are added to pods
+ to allow them to be scheduled on specific nodes.
+
+Q-43: What capability does the node affinity feature provide in Kubernetes?
+ Solution: It enables complex queries like OR, IN, NOT, and EXISTS for limiting pod placement on specific nodes.
+
+Q-44: How can you change the default resource limit for containers in Kubernetes?
+ Solution: Add a ‘limit’ section under the resources section in the pod definition file.
+
+Q-45: What does the taint effect determine for pods that do not tolerate the taint in Kubernetes?
+ Solution: The scheduling behavior of the pods
+
+Q-46: Where is the location specified for the kubelet to look for static pod definition files?
+ Solution: The --pod-manifest-path parameter in the kubelet.service file

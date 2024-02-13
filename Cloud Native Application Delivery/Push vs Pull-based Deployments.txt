@@ -1,0 +1,15 @@
+Push Based Model
+- An external system such as a continuous delivery pipeline triggers deployments to the kubernetes cluster after
+  a successful commit to a Git repository or a previous CI pipeline.
+- This external system or CI pipeline has direct read-write access to the cluster, allowing you to push the changes
+  to the production environment.
+- If you want to use this approach, you will need to expose the cluster credentials outside the cluster and store them
+  in the CI system.
+------------------------------------------------------------------------------------------------
+
+Pull Based Model
+- Is based on the concept that all changes are applied from inside the kubernetes cluster.
+- This is achieved through the use of an operator that is deployed within the cluster which regularly scans the
+  associated Git repositories and Docker registries for changes and if a change is detected the operator updates the
+  cluster's data accordingly.
+- One of benefit of pull-based approach is it's inherit security

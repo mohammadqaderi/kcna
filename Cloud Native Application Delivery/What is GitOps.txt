@@ -1,0 +1,33 @@
+Flux
+- FluxCD is a Kubernetes-native Application that syncs Kubernetes state with config files in a Git repository.
+- Developed by Weaveworks
+- Graduated CNCF Project
+- Easy to use
+- Focused on CD
+- Can only watch one Git repository and one Kubernetes Cluster and Namespace
+
+------------------------------------------------------------------------------------------------
+
+Argo
+- ArgoCD is similar to Flux, it's a declarative GitOps tool designed for Kubernetes.
+- Originally developed by Intuit
+- Graduated CNCF Project
+- Kubernetes-native
+- Uses pull-based Model
+- Focused on CD
+- Can only monitor multiple Git repository and multiple Kubernetes Namespace
+
+------------------------------------------------------------------------------------------------
+
+Jenkins X
+- Kubernetes-focused GitOps Tool that covers the entire CI/CD Process
+- A collection of other open-source tools. Relatively simple to deploy
+- More complex than Argo and Flux
+
+------------------------------------------------------------------------------------------------
+
+- Four core principles of GitOps:
+  - Declarative
+  - Versioned and Immutable
+  - Pulled Automatically
+  - Continuously Reconcile

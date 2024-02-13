@@ -1,0 +1,25 @@
+- The VPA automatically adjusts the amount of CPU and memory allocated to the pods in response to changing conditions.
+
+- The VPA has three components:
+ 1. VPA Recommender
+ - Monitor the resource usage of the pod from the metrics server
+ 2. VPA Updater
+ - Once the recommender has made its recommendations, The VPA updater checks the current state of the pod.
+ - It sees that the pod's current resource allocation does not match the recommender suggestion.
+ - If the updater notices that there's a difference, it'll take the necessary actions to align the pod's resources
+   with the recommended suggestions.
+ - Note: the updater can't change the resource request of the running pod directly.
+ - The updater's way of implementing the recommender's suggestion is to evict the pod
+ - The kubernetes scheduler then automatically creates a new pod.
+ - When the new pod is created, it goes through the kubernetes admission process (This is where the VPA admission controller
+   comes in).
+ - The VPA admission controller intercepts the new pod creation request and updates the pod's resource request to align
+   with the recommender's suggestions.
+ - There's a configuration property called updateMode which handles three possible values:
+   - Off: means the VPA will not automatically update the resource request of the pods.
+   - Initial: Allows the VPA to update the resource request of the pods but only when they're first created
+   - Auto: Allows the VPA to automatically update the resource request of the pods both when they're first created and
+     throughout their lifecycle
+
+- Check how to deploy VPA in the attached image.
+

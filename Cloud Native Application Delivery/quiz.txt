@@ -1,0 +1,100 @@
+Q-1: What is the main advantage of using Git as the single source of truth for both infrastructure and application resources?
+ Answer: It tracks changes to infrastructure and application resources as code.
+
+Q-2: What is the goal of the GitOps Working Group under the CNCF?
+ Answer: To define a vendor-neutral, principal-led meaning of GitOps
+
+Q-3: Which GitOps tool covers the entire CI/CD process and is relatively simple to deploy?
+ Answer: Jenkins X
+
+Q-4: What happens when approved changes are pushed to Git in GitOps?
+ Answer: The changes are automatically applied to the system
+
+Q-5: Which approach exposes cluster credentials outside the cluster, potentially posing security risks?
+ Answer: Push-based deployment approach
+
+Q-6: What is the purpose of GitOps?
+ Answer: To track and version infrastructure changes
+
+Q-7: Which GitOps tool was developed by Weaveworks and is now a graduated CNCF project?
+ Answer: Flux
+
+Q-8: In GitOps with ArgoCD, what command can be used to rollback to the previously stable version of the application?
+ Answer: argocd app rollback
+
+Q-9: What is the key advantage of using GitOps for managing infrastructure changes?
+ Answer: Greater efficiency and accuracy
+
+Q-10: What does ArgoCD do when it detects changes in the Kubernetes manifest repository?
+ Answer: Syncs the cluster with the desired state
+
+Q-11: What is the main difference between push-based and pull-based deployment approaches?
+ Answer: Push-based approach requires an external system with direct access to the cluster, while pull-based approach
+ applies changes from within the cluster.
+
+Q-12: How can a developer update the Kubernetes manifest repository after pushing a newly built image to the
+ container registry?
+ Answer: Modify the YAML files referencing the image and commit the changes
+
+Q-13: Which component of GitOps is responsible for monitoring the Kubernetes manifest repository and deploying resources
+ to achieve the desired state?
+ Answer: ArgoCD operator
+
+Q-14: What is a potential drawback of the pull-based deployment approach?
+ Answer: Being bound to specific tools and requiring agent installation/configuration for each cluster
+
+Q-15: How does Continuous Integration (CI) help in catching bugs early in the development process?
+ Answer: It automates the entire process of building, and testing code changes.
+
+Q-16: Which organization serves as the governing body for the Kubernetes project?
+ Answer: Cloud Native Computing Foundation (CNCF)
+
+Q-17: Which of the following is a benefit of a pull-based deployment approach?
+ Answer: Reduced risk of unauthorized access or malicious attacks
+
+Q-18: What is the main benefit of Continuous Deployment (CD) in the context of delivering new features to users?
+ Answer: It automates the deployment process to production environments.
+
+Q-19: What is the purpose of the OpenGitOps Project?
+ Answer: To standardize best practices for GitOps
+
+Q-20: How can a pull-based approach support a multi-tenant model in Kubernetes?
+ Answer: By distributing tools across namespaces with distinct access rights and corresponding git repositories
+
+Q-21: What is the main challenge faced by the software company in delivering new features to users before
+ implementing a CI/CD process?
+ Answer: Slow and error-prone deployment
+
+Q-22: How does GitOps ensure that changes to Kubernetes objects are deployed to the live environment?
+ Answer: By using a GitOps operator/tool like Flux or Argo CD
+
+Q-23: What is the main benefit of using GitOps in managing Kubernetes infrastructure and applications?
+ Answer: Rapid and predictable deployments
+
+Q-24: Which of the following GitOps tools is commonly used for automating the deployment process?
+ Answer: Flux
+
+Q-25: How does implementing a GitOps approach simplify the process of recovering from a disaster?
+ Answer: By tracking changes made to the system and allowing rollbacks if necessary
+
+Q-26: What potential issues can arise when team members make manual changes to infrastructure and application
+ resources using the CLI?
+ Answer: Configuration drift and manual errors
+
+Q-27: Which principle of GitOps emphasizes describing the entire system declaratively?
+ Answer: Declarative
+
+Q-28: Which tool allows multiple Git repositories and deployments to different Kubernetes namespaces?
+ Answer: Argo
+
+Q-29: What is the purpose of using a GitOps tool to continuously reconcile the system state?
+ Answer: To ensure the system remains in the desired state defined in Git
+
+Q-30: How is the desired state of an application versioned in GitOps?
+ Answer: By creating a new version of the YAML file for each update
+
+Q-31: What is FluxCD primarily focused on?
+ Answer: Continuous delivery to a Kubernetes cluster
+
+Q-32: In a pull-based deployment approach, how are updates to the cluster initiated?
+ Answer: Updates are initiated internally from within the cluster.

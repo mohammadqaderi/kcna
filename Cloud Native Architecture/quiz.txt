@@ -1,0 +1,178 @@
+Q-1: What is the problem with using different container technologies that lack open standards in a cloud native
+ architecture?
+ Answer: Different technologies may not be able to communicate or work together seamlessly,
+ leading to interoperability challenges and vendor lock-in.
+
+Q-2: Which of the following is a benefit of horizontal scaling over vertical scaling?
+ Answer: Horizontal scaling can efficiently handle varying workloads.
+
+Q-3: Which cloud providers offer FaaS?
+ Answer: AWS, Microsoft Azure, Google Cloud, and IBM Cloud
+
+Q-4: Which standard created by the OCI outlines how a file system bundle should be packaged into an image?
+ Answer: Image spec
+
+Q-5: What is the purpose of autoscaling?
+ Answer: To effectively adapt to changing demand without manual intervention
+
+Q-6: What is the purpose of a Kubernetes Enhancement Proposal (KEP)?
+ Answer: To provide a structured process for proposing, evaluating, and implementing changes in Kubernetes
+
+Q-7: Which of the following is NOT one of the autoscaling features offered by Kubernetes?
+ Answer: Node Autoscaler
+
+Q-8: What is the most common form of serverless computing?
+ Answer: A serverless model using Function-as-a-Service (FaaS)
+
+Q-9: What is the benefit of using FaaS?
+ Answer: It is flexible and affordable, and companies only pay for the computing resources they use.
+
+Q-10: What is the recommended way to propose a change in Kubernetes?
+ Answer: Write a KEP
+
+Q-11: What is the role of Working Groups in the Kubernetes community?
+ Answer: Come together to work on specific issues of the project
+
+Q-12: How are SIG leaders elected in Kubernetes?
+ Answer: They are appointed by a nomination and voting process within the SIG.
+
+Q-13: What are the three key factors essential for achieving true cloud-native autoscaling?
+ Answer: Effective application and infrastructure design, automatic scaling, bidirectional scaling
+
+Q-14: Why is Kubernetes considered a powerful tool for achieving true cloud-native autoscaling?
+ Answer: It has the ability to monitor the workload and automatically scale resources based on demand.
+
+Q-15: How are proposed changes or new features documented in Kubernetes?
+ Answer: Through Kubernetes Enhancement Proposals (KEPs)
+
+Q-16: How do KEPs address the limitations of using GitHub issues for proposing changes?
+ Answer: All options are correct
+ - By promoting transparency and collaboration
+ - By providing a structured and well-defined process
+ - By enabling efficient management of proposed changes
+
+Q-17: What is the purpose of Vertical Pod Autoscaler in Kubernetes autoscaling?
+ Answer: To adjust the amount of resources allocated to each pod based on demand
+
+Q-18: What flexibility does the Container Runtime Interface (CRI) provide in Kubernetes?
+ Answer: It empowers users to select the optimal container runtime that suits their specific needs.
+
+Q-19: What is the purpose of Cluster Autoscaler in Kubernetes autoscaling?
+ Answer: To adjust the number of nodes in a cluster based on demand
+
+Q-20: What does Kubernetes enable by decoupling layers for Runtime, Networking, Service Mesh, and Storage?
+ Answer: A highly flexible and modular architecture that avoids vendor and product lock-in
+
+Q-21: What are the limitations of using GitHub issues for proposing changes in Kubernetes?
+ Answer: All options are correct
+ - Lack of transparency and collaboration
+ - Difficulty in navigating and categorizing issues
+ - Challenges in managing proposed changes across multiple releases
+
+Q-22: What are the drawbacks of traditional server management?
+ Answer: It can result in needless expenses
+
+Q-23: Which section of a KEP outlines the motivation and goals of a proposed change or feature?
+ Answer: Goals and non-goals
+
+Q-24: Which platform was the initial distribution platform for container images, but now other platforms such
+ as Amazon ECR and Azure also comply with the OCI distribution standard?
+ Answer: Docker Hub
+
+Q-25: How does FaaS handle scaling?
+ Answer: It is automatically scaled based on the number of requests.
+
+Q-26: What is the purpose of a test plan in a KEP?
+ Answer: To ensure that the proposed change is thoroughly tested before implementation
+
+Q-27: Which cloud service provider offers AWS Lambda?
+ Answer: Amazon Web Services
+
+Q-28: Which autoscaling feature of Kubernetes allows businesses to adjust the resource allocation
+ of individual pods based on demand?
+ Answer: Vertical Pod Autoscaler
+
+Q-29: How can individuals get involved and contribute to the Kubernetes community?
+ Answer: All options are correct
+ - By joining the community through the Kubernetes Slack channel and mailing lists
+ - By attending community events such as meetups and conferences
+ - By starting small with small tasks and picking up issues on GitHub
+
+Q-30: What is the role of the Kubernetes Steering Committee?
+ Answer: Overseeing the overall direction of the Kubernetes project
+
+Q-31: When did Kubernetes join the Cloud Native Computing Foundation (CNCF)?
+ Answer: 2016
+
+Q-32: What is the significance of the provisional status in the KEP workflow?
+ Answer: The KEP has been suggested and is being discussed.
+
+Q-33: What is serverless computing?
+ Answer: A computing model where the server is managed by a cloud provider
+
+Q-34: What is the Container Runtime Interface (CRI)?
+ Answer: An open standard adopted by Kubernetes, which allows for a pluggable container runtime layer
+
+Q-35: What is Function-as-a-Service (FaaS)?
+ Answer: A model where the cloud provider manages the server infrastructure
+
+Q-36: Which autoscaling feature of Kubernetes allows businesses to automatically resize the entire cluster
+ to meet the demands of the application?
+ Answer: Cluster Autoscaler
+
+Q-37: What is the difference between horizontal and vertical scaling?
+ Answer: Vertical scaling is adding more resources to each unit, while horizontal scaling is adding more units.
+
+Q-38: Which of the following is not a Kubernetes Special Interest Group (SIG)?
+ Answer: SIG Bug Reporting
+
+Q-39: Which two-layered approach does Kubernetes utilize for its autoscaling mechanism?
+ Answer: Pod-based scaling and cluster-based scaling
+
+Q-40: Which of the following is a benefit of Kubernetes autoscaling?
+ Answer: It does not require any manual intervention to adjust the number of resources.
+
+Q-41: Why is it important to have a common or open standard for container technology in cloud native architecture?
+ Answer: To enable different cloud native technologies to work together seamlessly
+
+Q-42: What is autoscaling in the context of computing?
+ Answer: Automatically adjusting the number of resources based on demand for an application or service
+
+Q-43: What is the purpose of Horizontal Pod Autoscaler in Kubernetes autoscaling?
+ Answer: To adjust the number of pods running in a deployment based on demand
+
+Q-44: What does the container runtime specification, governed by the OCI, include?
+ Answer: Details on downloading, unpacking, and running the file system bundle using an OCI-compliant runtime
+
+Q-45: What is the pay-as-you-go model in FaaS?
+ Answer: The company only pays for the computing resources they use, rather than having to pay for a whole
+ server all the time.
+
+Q-46: What are open standards designed to promote in the cloud native ecosystem?
+ Answer: Interoperability, portability, and vendor neutrality
+
+Q-47: What is the benefit of bidirectional scaling in autoscaling?
+ Answer: It allows the system to scale up and down as demand fluctuates, increasing efficiency and saving costs.
+
+Q-48: Who developed the Kubernetes project?
+ Answer: Google
+
+Q-49: Which autoscaling feature of Kubernetes allows businesses to adjust the number of pods running in
+  a deployment based on demand?
+ Answer: Horizontal Pod Autoscaler
+
+Q-50: What is pod-based scaling in Kubernetes autoscaling?
+ Answer: Adjusting the number of pods running in a deployment based on demand
+
+Q-51: What is the Open Container Initiative (OCI) and what standards has it created for container images and runtimes?
+ Answer: It is a group that focuses on creating open standards for container images, runtimes, and distributions.
+ It has created the image spec, the runtime specification, and the distribution spec.
+
+Q-52: What is the purpose of the Kubernetes SIG Network?
+ Answer: Defining communication and connectivity between its components and services
+
+Q-53: What are SIGs in the Kubernetes community?
+ Answer: Groups responsible for managing specific areas of the project
+
+Q-54: Which SIG in Kubernetes is in charge of the overall design and structure of the platform?
+ Answer: SIG Architecture

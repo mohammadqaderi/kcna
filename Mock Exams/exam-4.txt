@@ -1,0 +1,230 @@
+Q-1: What are the characteristics of cloud-native architecture? (select three)
+ Answer:
+ - applications that are resilient, scalable, observable, highly automated, and easily updated
+ - team practices such as cooperation, integration, and open governance
+ - applications that meet and respond to modern business demands
+
+Q-2: What are some of the popular service mesh solutions commonly used for managing microservices communication
+ in Kubernetes clusters?
+ Answer: Linkerd, Istio, and Envoy
+
+Q-3: Which control plane service is responsible for distributing containers across multiple nodes within a Kubernetes cluster?
+ Answer: Scheduler
+
+Q-4: In Kubernetes, why would you use a secret resource?
+ Answer: to securely store sensitive information, such as API keys, passwords, or TLS certificates
+
+Q-5: What is the primary purpose of etcd in a Kubernetes cluster?
+ Answer: to store and manage configuration data, including cluster state and configuration settings across all control plane nodes
+
+Q-6: What is the primary purpose of using a service account?
+ Answer: provide authentication and authorization for applications running within pods
+
+Q-7: In a Kubernetes definition file, what is the purpose of using the nodeName parameter when specifying
+ a pod's scheduling preferences?
+ Answer: it indicates the name of the worker node where the pod should be scheduled
+
+Q-8: How can you label a node in Kubernetes to mark it for specific workloads or purposes?
+ Answer: use the command kubectl label nodes bryan-node-1 environment=production to assign the label to the node
+
+Q-9: What is the connection between a container image and a container in Kubernetes?
+ Answer: the container image is a blueprint for creating a container
+
+Q-10: What Kubernetes component represents an agent that runs on every Kubernetes worker node?
+ Answer: Kubelet
+
+Q-11: Your cloud-native application runs on Kubernetes. You want to ensure the pod has sufficient resources to serve your application
+ without crashing. What feature can you use to automatically modify the resource limits on the initial deployment and
+ throughout the pod's lifecycle?
+ Answer: Vertical pod autoscaler
+
+Q-12: To prevent connectivity issues to application pods that might be scaling up and down, what Kubernetes object sits
+ in front of pods to provide reliable networking and redirect traffic to healthy pods?
+ Answer: Service
+
+Q-13: After building a new container image for an application, what must be done to deploy the new image to the
+ Kubernetes cluster when following a GitOps workflow using ArgoCD?
+ Answer: Modify the helm chart or manifest with the new image, commit the changes, and submit a pull request
+
+Q-14: To pull an image from your private repository, you must authenticate with the registry to download a private image.
+ What command allows you to log in to Docker Hub?
+ Answer: docker login
+
+Q-15: What is the primary role of kube-proxy in a Kubernetes cluster?
+ Answer: perform network proxying and load balancing
+
+Q-16: The Kubernetes control plane is a critical component of using a Kubernetes cluster.
+ Select the true statements about the control plane (select three)
+ Answer:
+ - control plane nodes can be physical servers, virtual machines, or cloud instances
+ - control plane nodes should be spread across failure domains
+ - you should run 3 or 5 control plane nodes for high availability
+
+Q-17: What GitOps tool offers a full range of CI/CD capabilities, such as image building, preview environments,
+ and deployment to Kubernetes?
+ Answer: Jenkins X
+
+Q-18: What is the most important factor that helps ensure continuous operation and fault tolerance for the control plane
+ in a Kubernetes cluster?
+ Answer: the control plane components are spread across multiple nodes
+
+Q-19: In terms of Kubernetes, what are the differences between a Working Group and a Special Interest Group (SIG)? (select two)
+ Answer:
+ - Working Groups are formed to address concerns and initiatives that affect multiple SIGs or the project as a whole.
+ - SIGs are focused on specific technical areas of the Kubernetes project, such as storage, networking, or scalability
+
+Q-20: Which of the following best describes the architectural relationship between pods and containers?
+ Answer: containers run inside of a pod and are defined by a controller specification (spec)
+
+Q-21: You have placed a ReplicaSet definition file in the /etc/kubernetes/manifests folder on a worker node in
+ an attempt to create it. Why won't kubelet create the new resource?
+ Answer: the kubelet monitors the /etc/kubernetes/manifests  directory for static pod definitions, not for ReplicaSet definitions
+
+Q-22: What are the benefits of using autoscaling for a system or application? (select three)
+ Answer:
+ - increased fault tolerance
+ - cost optimization of underlying resources
+ - the application can handle spikes or drops in traffic
+
+Q-23: Which significant development has occurred regarding Docker and its relationship with Kubernetes?
+ Answer: Docker has been deprecated in favor of the Containerd runtime
+
+Q-24: What is a security concern related to the default storage of Secrets in the API server's underlying data store (etcd)?
+ Answer: anyone with access to etcd or the cluster can read or modify Secrets
+
+Q-25: Which of the following is NOT a reason to use namespaces in a Kubernetes cluster?
+ Answer: isolate hostile or potentially dangerous workloads from others
+
+Q-26: What Prometheus component is responsible for sending messages to systems or administrators via email,
+ Slack messages, or 3rd party solutions?
+ Answer: Alert Manager
+
+Q-27: Which of the following are valid authentication mechanisms for a Kubernetes cluster? (select three)
+ Answer:
+ - static password or token file (csv)
+ - third-party identity provider
+ - client certificates (X.509)
+
+Q-28: Which of the following best defines serverless computing?
+ Answer: a service that allows developers to execute code in response to events without having to provision or manage servers
+
+Q-29: You are a Kubernetes administrator tasked with troubleshooting an issue inside a running pod. What is the
+ most appropriate method to connect to the pod and run commands for debugging?
+ Answer: use kubectl exec  to connect to it and execute the desired commands
+
+Q-30: You have applied a taint to a Kubernetes node to ensure only certain workloads will run on this node. Additionally,
+ you add a toleration to a web-app pod to match the taint so it can be scheduled on the node. However, you notice that
+ the pod is NOT running on the desired node, and is running on a different node in the cluster.
+ Why didn't the taint and toleration configuration ensure the pod is scheduled on the desired node?
+ Answer: taints and tolerations do not tell a pod to go to a particular node, they only tell the nodes that they
+ can accept pods with certain tolerations
+
+Q-31: What are the benefits of using serverless functions on Kubernetes or a public cloud provider? (select three)
+ Answer:
+ - the platform can handle scaling, event triggering, and the lifecycle management of the function
+ - enables cost savings for organizations with unpredictable traffic or usage patterns
+ - allows developers to write code vs. worrying about the underlying server or platform
+
+Q-32: The Cloud Native Computing Foundation (CNCF) has defined three maturity stages that projects must go through in
+ order to become fully-fledged applications. What are the three stages?
+ Answer:
+ 1. Sandbox
+ 2. Incubating
+ 3. Graduated
+
+Q-33: What was the original container runtime that Kubernetes used to schedule and run containers?
+ Answer: Docker
+
+Q-34: When you send commands to a Kubernetes cluster, what control plane component are you interacting with?
+ Answer: API Server
+
+Q-35: You're a Kubernetes administrator responsible for ensuring that a specific node in your cluster is reserved for
+ critical workloads. What Kubernetes features can you use to achieve this goal?
+ Answer: Create a taint on the dedicated node and define tolerations in the pod specifications. Use NodeAffinity to
+ ensure the pods are scheduled on the correct node.
+
+Q-36: When comparing push-based and pull-based deployment approaches, what is the primary difference between the two?
+ Answer: Push-based deployments require integration with an external system that has direct access to the Kubernetes cluster,
+ while pull-based deployments apply changes from within the cluster itself
+
+Q-37: A common deployment model is to run the main application container along with a helper container inside a Pod.
+ What is this helper container often referred to as?
+ Answer: Sidecar
+
+Q-38: What system allows containers to discover services and establish connectivity in an environment
+ using service discovery and service mesh?
+ Answer: DNS
+
+Q-39: What does CNCF stand for?
+ Answer: Cloud Native Computing Foundation
+
+Q-40: What is Prometheus, and what is it commonly used for in the context of system monitoring and observability?
+ Answer: Prometheus is an open-source monitoring and alerting toolkit used to gather and analyze metrics from various software systems
+
+Q-41: You have submitted a new manifest to deploy your new production application. However, it seems the cluster cannot
+ find a suitable node to schedule some of the containers. What state will the pods be in until Kubernetes finds
+ an appropriate node?
+ Answer: Pending
+
+Q-42: What metric below would be the best choice for a service level indicator?
+ Answer: application error rates
+
+Q-43: In Kubernetes, why might you consider creating a custom scheduler?
+ Answer: to implement scheduling policies and rules that the default scheduler does not support
+
+Q-44: Which governing body is responsible for creating open standards for container formats and runtimes?
+ Answer: Open Container Initiative (OCI)
+
+Q-45: What does it mean for a container to be OCI-compliant in the context of containerization and container runtimes?
+ Answer: the container adheres to the Open Container Initiative (OCI) runtime specification and can run on any OCI-compliant runtime
+
+Q-46: After months of work, you are ready to deploy your customer-facing application on a Kubernetes cluster.
+ To ensure high availability and take advantage of failure domains, what feature can you use to ensure pods are
+ scheduled across all available nodes?
+ Answer: Spread Constraints
+
+Q-47: In Kubernetes, what is a key consideration when deciding whether to use an init-container or a sidecar container in a pod?
+ Answer: init-containers are better for one-time setup tasks during pod initialization
+
+Q-48: Which of the following best describes the difference between DevOps and Site Reliability Engineering(SRE)?
+ Answer: DevOps focuses on managing software development processes, whereas SRE works to design and implement the kind of
+ scalable, dependable systems that ensure maximum reliability
+
+Q-49: In a default Kubernetes cluster, what is the primary DNS configuration used for resolving service names to
+ their respective pod IP addresses?
+ Answer: the CoreDNS service running within the cluster
+
+Q-50: Which of the four GitOps pillars involves comparing the actual deployment against the desired state and making
+ changes to ensure the infrastructure remains consistent?
+ Answer: Continuously Reconciled
+
+Q-51: How does Prometheus collect metrics from its configured targets?
+ Answer: by scraping targets who expose the metrics through an HTTP endpoint
+
+Q-52: In the context of Kubernetes, what is Helm?
+ Answer: package manager for Kubernetes that assists with application deployment
+
+Q-53: What is the primary purpose of a DaemonSet controller in Kubernetes?
+ Answer: to ensure a specific pod runs on every node in the cluster, such as a logging agent
+
+Q-54: In Kubernetes, what is the primary difference between Taints and Tolerations and Node Affinity
+ Answer: Taints and Tolerations allow a node to repel a set of pods, while Node Affinity is used to attract pods to a set of nodes.
+
+Q-55: How can Prometheus gather a list of targets for metric collection besides using a static list of configured targets?
+ Answer: by using service discovery to gather a list of targets dynamically
+
+Q-56: What distinguishes a DevOps Engineer from a Site Reliability Engineer (SRE) in terms of their roles and responsibilities?
+ Answer: typically a Site Reliability Engineer (SRE) has more of an operational focus than DevOps Engineer
+
+Q-57: Which of the following are subgroups available in the Kubernetes API? (select three)
+ Answer:
+ - batch
+ - storage.k8s.io
+ - apps
+
+Q-58: What components do containers share when they run in the same Pod? (select three)
+ Answer:
+ - network stack
+ - memory
+ - volumes
+

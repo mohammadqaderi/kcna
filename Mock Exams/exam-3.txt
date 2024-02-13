@@ -1,0 +1,234 @@
+Q-1: Which fundamental data storage concept does Prometheus rely on to effectively organize and manage collected metric data?
+ Answer: time-based database
+
+Q-2: What are some advantages of using a hosted Kubernetes service, such as AWS EKS or Google Kubernetes Engine (GKE),
+ compared to managing your own Kubernetes cluster?
+ Answer: Hosted Kubernetes services simplify cluster management and maintenance
+
+Q-3: Which of the following strategies can be used to help reduce costs in a public cloud platform? (select three)
+ Answer:
+ - Choosing the proper infrastructure or services to run your application, such as using reserved or spot instances where applicable
+ - Use autoscaling to automatically scale resources down when the user load has decreased
+ - Deleting unneeded resources from your accounts
+
+Q-4: What group did the CNCF create to oversee and define GitOps in a vendor-neutral manner?
+ Answer: GitOps Working Group
+
+Q-5: Which of the following is NOT a requirement for autoscaling to be cloud native?
+ Answer: the application must provide an API to query
+
+Q-6: In your Kubernetes cluster, you have a pod (web) that runs two containers: an app and a sidecar container.
+ How can you get detailed information about the pod to view the container names?
+ Answer: kubectl describe pod web
+
+Q-7: You need to examine the logs for a pod named prd-nginx-app. What command would you use to display these logs to the CLI?
+ Answer: kubectl logs prd-nginx-app
+
+Q-8: You have been tasked with refactoring an existing application to make it cloud-native.
+ What benefits can the organization expect after completion? (select two)
+ Answer:
+ - on-demand based scaling to ensure availability and increased cost savings
+ - increased resiliency for the application resulting in high availability
+
+Q-9: You are managing user access in a Kubernetes cluster. You've noticed that Kubernetes lacks objects to represent
+ normal user accounts, and you cannot add normal users to the cluster through an API call. What mechanism is typically
+ used to manage user authentication and access to a Kubernetes cluster?
+ Answer: implement an external identity provider (e.g., LDAP or OIDC) to authenticate and manage user access
+
+Q-10: What year did Google initially develop Kubernetes?
+ Answer: 2014
+
+Q-11: What is the role of gVisor in a Kubernetes environment?
+ Answer: gVisor is a security-focused container runtime that provides an additional layer of isolation for
+ containers running in Kubernetes.
+
+Q-12: You are a Kubernetes administrator managing a production cluster. You need to perform a rolling update of a deployment
+ using kubectl. What is a critical requirement for successfully executing this command?
+ Answer: the Kubernetes API server must be available
+
+Q-13: You see a resource request for 5 CPU units in a resource definition file. What is a CPU unit equivalent to?
+ Answer: one physical CPU core or one virtual core
+
+Q-14: What two CLI commands allow you to create objects in Kubernetes?
+ Answer:
+ - kubectl apply
+ - kubectl create
+
+Q-15: What component of a Kubernetes cluster is made up of a collection of independent services that are essentially
+ the "brains" of a cluster?
+ Answer: controlplane
+
+Q-16: What term best describes the process of automating container deployment and management, which includes managing
+ connectivity and scaling based on user demand?
+ Answer: container orchestration
+
+Q-17: Which of the following are valid container runtimes that can be used with Kubernetes? (select three)
+ Answer:
+ - CRI-O
+ - Docker Engine
+ - ContainerD
+
+Q-18: What happens when the ArgoCD operator detects changes in the repo used to store Kubernetes manifests?
+ Answer:
+
+Q-19: What happens when the ArgoCD operator detects changes in the repo used to store Kubernetes manifests?
+ Answer: traffic flowing between services within the same data center or cluster
+
+Q-20: In the context of service mesh, what does "east-west traffic" refer to?
+ Answer: traffic between a user's device and a service within the data center
+
+Q-21: How do you specify resource limits for CPU and memory in a Kubernetes resource definition file, such as a pod manifest?
+ Answer: using the resources field within the containers section
+
+Q-22: What type of deployment approach involves the creation of step-by-step instructions
+ to provision an application or infrastructure?
+ Answer: imperative
+
+Q-23: You have a single Kubernetes cluster that you want to run multiple workloads managed by different teams.
+ Therefore, you need to isolate the users and workloads. What Kubernetes feature can be used to safely and easily
+ meet these requirements?
+ Answer: namespaces
+
+Q-24: Which component represents the smallest deployable unit of computing that you can create and manage in Kubernetes?
+ Answer: Pod
+
+Q-25: You've created a new Kubernetes manifest to run five instances of your production application in a deployment.
+ Once applied, what Kubernetes component is responsible for changing the actual state to the desired state and
+ ensuring the desired number of pods is always running?
+ Answer: Deployment Controller
+
+Q-26: What feature does Kubernetes use to implement the pod network to create a large, flat open network that pods
+ can use to communicate on?
+ Answer: third-party Container Network Interface (CNI) plugins
+
+Q-27: You have a Kubernetes Deployment managing an application workload that has changing demand throughout the day.
+ What feature of Kubernetes can be used to automatically scale the number of pods in the Deployment as load increases
+ and delete pods when demand decreases?
+ Answer: Horizontal Pod Autoscaler
+
+Q-28: What is the primary purpose of annotations in Kubernetes?
+ Answer: to provide additional metadata or information about Kubernetes resources
+
+Q-29: Which of the following components are typically found on worker nodes in a Kubernetes cluster? (select two)
+ Answer:
+ - kube-proxy
+ - kubelet
+
+Q-30: When creating a resource definition file, what section would you define labels that apply to the resource itself?
+ Answer: metadata
+
+Q-31: In the context of container security, what is a recommended best practice regarding containers running as the root user?
+ Answer: run containers as non-root users whenever possible to enhance security
+
+Q-32: Knative and OpenFaas are examples of what kind of platform commonly used to deploy and execute functions
+ on Kubernetes clusters?
+ Answer: Serverless
+
+Q-33: When operating a managed service, it's common to have a contract between a vendor and a user that guarantees a
+ specific Service Level Objective (SLO). What are these agreements often called?
+ Answer: Service Level Agreement (SLA)
+
+Q-34: How do controllers operate within the Kubernetes ecosystem to maintain the desired state of resources in a cluster?
+ Answer: Controllers use a declarative approach, reconciling the current state with the desired state as defined
+ in resource manifests.
+
+Q-35: How often are new versions of Kubernetes released?
+ Answer: every four months (3x yearly)
+
+Q-36: You want to use taints and tolerances in your Kubernetes environment and need to apply the settings.
+ Select the correct answers below regarding taints and tolerances: (select two)
+ Answer:
+ - tolerations are added to the pod definition file to define the
+ - taints are set on nodes using the kubectl command
+
+Q-37: When considering the security of credentials for a platform, which type of deployment is more secure?
+ Answer: pull-based deployments
+
+Q-38: What declarative GitOps tool was developed by Intuit and is a graduated CNCF project?
+ Answer: Argo
+
+Q-39: What is NOT a benefit of using a pull-based system like Prometheus for the observability of a system or application?
+ Answer: Simplifies the configuration of an event-based system for monitoring events
+
+Q-40: How can you manually assign a pod to a specific node in a Kubernetes cluster?
+ Answer: provide the name of the target node in the nodeName field in the pod definition file
+
+Q-41: What platform was the first to standardize the distribution of container images and comply with the
+ OCI distribution specification?
+ Answer: Docker Hub
+
+Q-42: What is the primary purpose that the Open GitOps project aims to solve?
+ Answer: Define and standardize best practices for GitOps and create a common language and understanding of GitOps
+ that can be used by everyone
+
+Q-43: What are the benefits of Special Interest Group in managing the Kubernetes project? (select three)
+ Answer:
+ - allows for faster development of features and bugs fixing
+ - enables a faster pace of innovation
+ - allows them to focus on particular areas of the project
+
+Q-44: What command line (CLI) utility is used for interacting and managing a Kubernetes cluster?
+ Answer: kubectl
+
+Q-45: By default, Kubernetes implements a flat network to enable communication and networking between pods. What is this network called?
+ Answer: pod network
+
+Q-46: What is a Kubernetes cluster?
+ Answer: set of nodes (computers) that work together to run containerized applications orchestrated by Kubernetes
+
+Q-47: You are a Kubernetes administrator frequently working in multiple namespaces. What is the most efficient way
+ for you to configure the desired namespace so you don't have to specify the namespace each time you run a kubectl command?
+ Answer: define a Kubernetes context for the target namespace using
+
+Q-48: What OCI standard defines the structure, format, and metadata of container images used in containerization technologies like Docker and Kubernetes?
+ Answer: Image spec
+
+Q-49: What are the three crucial Kubernetes services that operate on worker nodes? (select three)
+ Answer:
+ - container runtime
+ - kubelet
+ - kube-proxy
+
+Q-50: What makes a role a "full stack" developer?
+ Answer: a full-stack developer understands and can develop solutions for the front-end and back-end components of a system
+
+Q-51: What is the primary purpose of using spread constraints in Kubernetes?
+ Answer: to distribute pods of a specific service evenly across all nodes in the cluster to improve load balancing
+
+Q-52: What is the well-known local directory that kubelet periodically checks to deploy and manage static pods?
+ Answer: /etc/kubernetes/manifests
+
+Q-53: Once an API is updated to version 1, (v1) what is the term used to refer to this stage of the API's development?
+ Answer: stable
+
+Q-54: In a cloud-native architecture, which solution is typically used to connect thousands of services across different clusters, providing features like load balancing, traffic management, and observability?
+ Answer: Service Mesh
+
+Q-55: What are the default resources assigned to a pod if the definition file doesn't specify any requirements,
+ assuming there are no additional configurations applied?
+ Answer: 0.5 CPU, 256Gi memory
+
+Q-56: Which key component of Kubernetes is the cluster store built on and is responsible for storing configuration
+ data and maintaining cluster state?
+ Answer: etcd
+
+Q-57: When it comes to downloading or searching for containerized versions of applications, where are the images typically
+ stored?
+ Answer: Container Registry, such as Docker Hub or Amazon ECR
+
+Q-58: What are two different ways that you can create new pods on a worker node with a definition file? (select two)
+ Answer:
+ - through the Kubernetes HTTP API endpoint
+ - create a definition file and place it in the static pod directory of /etc/kubernetes/manifests
+
+Q-59: When scheduling a pod, what phases are used to determine the best node to assign the pod?
+ Answer: Filtering and Scoring
+
+Q-60: When deploying a cloud-native application, what are the key factors to consider for using autoscaling for
+ your application? (select three)
+ Answer:
+ - the application itself must be designed to scale
+ - the underlying infrastructure should be designed to scale effectively
+ - autoscaling must be able to scale up to meet user's demand but scale down to ensure cost savings and efficient use
+   of resources
+

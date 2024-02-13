@@ -1,0 +1,5 @@
+- Horizontal Pod autoscaler is just a controller just like other kubernetes controllers
+- It monitors the resource utilization via the metrics server
+- The metrics server collects information from the nodes in the cluster as well as the pods
+- View the Horizontal pod autoscalers: kubectl get hpa
+- Check the HPA example image.

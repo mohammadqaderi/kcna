@@ -1,0 +1,154 @@
+Q-1: Which of the following is an essential element of cloud native?
+ Solution: Microservices
+
+Q-2: What is Cloud Native?
+ Solution: A modern approach to application development and deployment that embraces the advantages of cloud computing,
+ harnessing its distributed computing capabilities to build and run applications effectively
+
+Q-3: Who maintains and develops the CRI Control command line utility?
+ Solution: Kubernetes Community
+
+Q-4: What is DevOps?
+ Solution: A set of practices that promotes collaboration between development and operations teams to manage and scale microservices effectively
+
+Q-5: When using Docker on an Ubuntu operating system, based on which of the following distributions can you run a container?
+ Solution: All the options are valid
+ - Fedora
+ - Debian
+ - CentOS
+
+Q-6: What is the role of etcd in a Kubernetes cluster?
+ Solution: All the options are valid
+ - It implements locks to prevent conflicts between the masters.
+ - It ensures distributed storage of information across all nodes in the cluster.
+ - It stores all the data used to manage the cluster.
+
+Q-7: What is the purpose of the CTR command line tool that comes with ContainerD?
+ Solution: It is solely made for debugging containerD and supports a limited set of features.
+
+Q-8: How would you use the CTR command line tool to pull a Redis image?
+ Solution: ctr images pull < address of the redis image >
+
+Q-9: Which of the following statements accurately describes the purpose of the CRI Control tool?
+ Solution: It's primarily used for debugging and inspecting container runtimes
+
+Q-10: Which command is used with the CTR command line tool to run a container by specifying the image address?
+ Solution: ctr run < image address >
+
+Q-11: Why was dockershim removed from Kubernetes version 1.24?
+ Solution: To encourage the use of container runtimes that support the CRI
+
+Q-12: Where can you find containerized versions of applications readily available for use?
+ Solution: Docker Hub
+
+Q-13: Which component in Kubernetes is responsible for making decisions to bring up new containers in response to node,
+ container, or endpoint failures?
+ Solution: Controllers
+
+Q-14: How can you specify a specific runtime endpoint when using the CRI Control tool?
+ Solution:
+ - Setting the CONTAINER_RUNTIME_ENDPOINT environment variable
+ - Using the --runtime-endpoint command line option
+
+Q-15: What is the Container Runtime Interface (CRI) in Kubernetes?
+ Solution: A plugin interface that enables any container vendor to work as a container runtime for Kubernetes
+
+Q-16: In the context of Kubernetes, what is a cluster?
+ Solution: A set of nodes grouped together
+
+Q-17: What is the role of the master node in a Kubernetes cluster?
+ Solution: Orchestrating containers on the worker nodes and overseeing the cluster
+
+Q-18: Which of the following is not a benefit of cloud computing?
+ Solution: Increased reliance on physical infrastructure
+
+Q-19: What is the role of the Kubelet in a Kubernetes cluster?
+ Solution: It is the agent responsible for managing and monitoring containers on each node.
+
+Q-20: Which statement accurately describes the container runtime used with Kubernetes?
+ Solution: The container runtime used with Kubernetes can vary, with Docker being a common option.
+
+Q-21: Which of the following components are installed when setting up Kubernetes on a system?
+ Solution: All the options are valid
+ - Kubelet service
+ - Container Runtime
+ - API Server and etcd service
+
+Q-22: What are containers?
+ Solution: Completely isolated and portable environments for running applications
+
+Q-23: What is the primary purpose of Docker, distinguishing it from hypervisors?
+ Solution: Containerizing applications for shipping and running
+
+Q-24: Why do Docker images continue to work seamlessly in Kubernetes even after the removal of Docker support?
+ Solution: Because Docker images adhere to the Open Container Initiative (OCI) standard
+
+Q-25: Which command can be used to run an instance of MongoDB using Docker?
+ Solution: docker run
+
+Q-26: Which component serves as the entry point for interacting with a Kubernetes cluster?
+ Solution: API Server
+
+Q-27: What is the benefit of using the Nerd Control (NerdCTL) tool over the CTR command line tool?
+ Solution: NerdCTL provides access to the newest features implemented into containerD.
+
+Q-28: Which of the following statements is true about ContainerD?
+ Solution: ContainerD is a separate project and a member of Cloud Native Computing Foundation (CNCF).
+
+Q-29: Which of the following components are typically found on a Kubernetes master node?
+ Solution: kube-apiserver, etcd store, controllers, and scheduler
+
+Q-30: What is the primary role of Kubernetes in containerized environments?
+ Solution: Orchestrating the deployment and management of containers in a clustered environment
+
+Q-31: What is the purpose of the kubectl tool in Kubernetes?
+ Solution: It is used to deploy and manage applications on a Kubernetes cluster.
+
+Q-32: What is the benefit of using container runtimes that support the CRI?
+ Solution: It provides better compatibility and standardization across container runtimes
+
+Q-33: Which of the following is NOT mentioned as a container orchestration technology?
+ Solution: ContainerD
+
+Q-34: Which container technology does Docker primarily utilize for its containers?
+ Solution: LXC
+
+Q-35: Which command is commonly used with kubectl to deploy an application on a Kubernetes cluster?
+ Solution: kubectl run
+
+Q-36: What is the purpose of dockershim in Kubernetes?
+ Solution: To allow Docker to communicate with Kubernetes without using the CRI
+
+Q-37: What is the term used to describe the automated process of deploying and managing containers, including managing
+ connectivity and scaling based on workload?
+ Solution: Container orchestration
+
+Q-38: What is the primary function of a node(Minion) in a Kubernetes cluster?
+ Solution: Acting as a worker machine where containers are launched
+
+Q-39: Which command is used with NerdCTL to run a container with the name “red” using the “alpine” image?
+ Solution: nerdctl run --name red alpine
+
+Q-40: Which option is used with NerdCTL to specify port mappings and expose ports when running a container?
+ Solution: -p
+
+Q-41: Which command is used to view information about the Kubernetes cluster?
+ Solution: kubectl cluster-info
+
+Q-42: What is containerization?
+ Solution: Running microservices in their own container
+
+Q-43: Which component in Kubernetes is responsible for distributing containers across multiple nodes?
+ Solution: Scheduler
+
+Q-44: How do containers differ from virtual machines (VMs) with respect to their operating system (OS) kernel?
+ Solution: Containers share the same OS kernel as the host system, but VMs have their own separate OS kernel.
+
+Q-45: What is the relationship between a container image and a container in containerization?
+ Solution: A container image is a package or template used to create one or more containers.
+
+Q-46: Which of the following features are supported by NerdCTL but are not available in Docker?
+ Solution: All the options are valid
+ - Encrypted container images
+ - P2P image distribution
+ - Lazy pulling of images

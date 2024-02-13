@@ -1,0 +1,30 @@
+- SLI (Service Level Indicator): quantitative measure of some aspect of the level of service that is provided.
+- Common SLIs:
+  - Request latency
+  - Error rate
+  - Saturation
+  - Throughput
+  - Availability
+- Not all metrics make for good SLIs. you want to find metrics that accurately measure a user's experience.
+- Things like high-cpu/high-memory make for a poor SLIs as a user might not see any impact in their end during these events.
+---------------------------------------------------------------------------------------------------------------------------
+
+- SLO (Service Level Object): target value or range for an SLI.
+  SLI - Latency
+  SLO - Latency < 100ms
+
+  SLI - Availability
+  SLO - 99.9% uptime
+
+- SLOs should be directly related to customer experience. the main purpose of the SLO is to quantify reliability of
+  a product to a customer
+- For SLOs, it is maybe tempting to set them to aggressive values like 100% uptime, however, this will come
+  at a higher cost
+- The goal is not to achieve perfection, but instead to make customers happy with the right level of reliability.
+- If a customer is happy with 99% reliability increasing it any further doesn't add any other value
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+- SLA (Service Level Agreement): contract between a vendor and a user that guarantees a certain SLO
+- The consequences for not meeting any SLO can be financial based but can also be variety of other things as well

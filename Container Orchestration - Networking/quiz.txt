@@ -1,0 +1,118 @@
+Q-3: In a typical Container Network Interface (CNI) setup, where are the supported CNI plugins stored?
+ Solution: In the CNI bin directory as executables
+
+Q-4: In a Container Network Interface (CNI) setup, where does the kubelet look to determine which plugin should be used?
+ Solution: In the CNI config directory containing configuration files
+
+Q-5: Which command can be used to view the running kubelet service?
+ Solution: ps -aux | grep kubelet
+
+Q-6: How are all the pods and services for a namespace grouped together within the DNS subdomain in Kubernetes?
+ Solution: They are grouped under the subdomain under the name of the namespace
+
+Q-7: Who defines the format for the plugin configuration file in a Container Network Interface (CNI) setup?
+ Solution: CNI Standard
+
+Q-8: On which port does the ETCD server typically listen for communication?
+ Solution: 2379
+
+Q-9: In a Kubernetes cluster, how can a pod reach a service using its service name?
+ Solution: Only if the pod and the service in the same namespace
+
+Q-10: When pod records are enabled in Kubernetes, how are the records created for pods, and what naming convention is used?
+ Solution: Records are created by replacing dots in the IP address with dashes as the record name
+
+Q-11: What is the responsibility of a container runtime in terms of networking?
+ Solution: All the options
+ - Identifying and attaching namespaces to the appropriate network
+ - Calling the appropriate network plugin
+ - Creating container network namespaces
+
+Q-12: What does the “ipMasquerade” field in a Container Network Interface (CNI) plugin configuration file determine?
+ Solution: Whether a NAT rule should be added for IP Masquerading
+
+Q-13: Which port does the kube-controller-manager component of Kubernetes require to be open?
+ Solution: 10257
+
+Q-14: How can a pod within a Kubernetes cluster reach a service?
+ Solution: By using the service name
+
+Q-15: What is a mandatory requirement for every interface on a node in terms of network configuration?
+ Solution: Each node interface must have an address configured
+
+Q-16: What does the DNS record created for a Kubernetes service typically map?
+ Solution: The IP address to the service name
+
+Q-17: In addition to port 2379, which additional port needs to be open for ETCD clients to communicate with each other?
+ Solution: Port 2380
+
+Q-18: Which layer of networking is crucial for the functioning of a cluster at the pod level?
+ Solution: Pod Layer
+
+Q-19: On which port should the Kubernetes master node be configured to accept connections for the API server?
+ Solution: Port 6443
+
+Q-20: What does the “isGateway” field in a Container Network Interface (CNI) plugin configuration file determine?
+ Solution: Whether the bridge network should act as a gateway
+
+Q-21: What happens when a Kubernetes service is created?
+ Solution: DNS Service automatically create a records for the service
+
+Q-22: In a Container Network Interface (CNI) plugin configuration file, what value would you typically set for
+ the “type” field if you want to use a bridge network?
+ Solution: bridge
+
+Q-23: What does the IPAM section in a Container Network Interface (CNI) plugin configuration file define?
+ Solution: The subnet of range of IP addresses assigned to pods
+
+Q-24: What are the two unique identifiers required for hosts in a network?
+ Solution: Unique hostname and MAC address
+
+Q-25: In Kubernetes, how are all the pods and services for a namespace grouped together within the DNS root domain for the cluster?
+ Solution: They are grouped under a root domain cluster.local by default
+
+Q-26: Which port does the kube-scheduler component of Kubernetes require to be open?
+ Solution: 10259
+
+Q-27: On which port do the kubelets on both master and worker nodes listen?
+ Solution: 10250
+
+Q-28: In a Kubernetes cluster, how are all the services grouped together within the DNS subdomain?
+ Solution: They are grouped under the svc subdomain
+
+Q-29: In a Container Network Interface (CNI) plugin configuration file, what does the “type” field indicate
+ when set to “host-local” under the IPAM section?
+ Solution: The type of IP address management used for pods
+
+Q-30: Where is the Container Network Interface (CNI) plugin typically configured in a Kubernetes cluster?
+ Solution: In the kubelet service on each node in the cluster
+
+Q-31: Which of the following are popular networking solutions used to implement pod networking requirements in Kubernetes?
+ Solution: All options are valid
+ - WeaveWorks
+ - Flannel
+ - Cilium
+
+Q-32: What are the requirements for pod networking in Kubernetes?
+ Solution: All options are valid
+ - Each pod should have a unique IP address
+ - Pods should be able to communicate across different nodes using their IP addresses
+ - Pods within same node should be able to communicate using their IP addresses
+
+Q-33: What is a fundamental requirement for each Kubernetes master or worker node in terms of network connectivity?
+ Solution: Each node should have at least one interface connected to a network.
+
+Q-34: What is the fully qualified domain name (FQDN) for a web service called ‘web-service’ in the ‘apps’ namespace
+ within a Kubernetes cluster?
+ Solution: web-service.apps.svc.cluster.local
+
+Q-35: When setting up a Kubernetes cluster, does Kubernetes deploy a built-in DNS server by default?
+ Solution: Yes, a built-in DNS server is automatically deployed by default
+
+Q-36: Kubelets can be present on both master nodes and worker nodes in a Kubernetes cluster.
+ Solution: True
+
+Q-37: In Kubernetes, which range of ports is typically used by worker nodes to expose services for external access?
+ Solution: 30000 - 32767
+
+

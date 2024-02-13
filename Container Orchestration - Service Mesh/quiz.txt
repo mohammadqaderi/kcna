@@ -1,0 +1,80 @@
+Q-1: Which type of service must be created in Kubernetes if you want to make an application accessible outside of the cluster?
+ Solution: NodePort
+
+Q-2: Which feature of a service mesh enables automatic detection and registration of services within a network?
+ Solution: Service Discovery
+
+Q-3: What is the primary function of Envoy?
+ Solution: Acting as a proxy and communication bus.
+
+Q-4: In a service mesh architecture, what is the role of the control plane?
+ Solution: It manages all the traffic into and out of services via proxies.
+
+Q-5: Which of the following is true about a proxy service in an application architecture?
+ Solution:
+ - It ensures secure connections through TLS encryption.
+ - It manages user authentication and retries failed requests.
+
+Q-6: Which three components were originally part of the control plane in Istio?
+ Solution: Citadel, Pilot, and Galley
+
+Q-7: How does Kubernetes services identify and select specific pods from a large pool of other pods?
+ Solution: By using pod labels
+
+Q-8: What is the role of a service mesh in a microservice architecture?
+ Solution: It is a dedicated and configurable infrastructure layer that handles the communication between services without code changes.
+
+Q-9: Which of the following is NOT a main topic covered by service discovery in a service mesh?
+ Solution: Traffic Encryption
+
+Q-10: Which feature of a service mesh provides secure communication between services?
+ Solution: Mutual TLS
+
+Q-11: What is the default type of service in Kubernetes that facilitates communication between applications within the cluster?
+ Solution: ClusterIP
+
+Q-12: What is the term used to describe the ability of pods in Kubernetes to be created and killed?
+ Solution: Ephemeral
+
+Q-13: Which significant achievement did the Envoy project accomplish in its timeline with the Cloud
+ Native Computing Foundation (CNCF)?
+ Solution: It reached the graduation level in 2018.
+
+Q-14: What is the key difference between a LoadBalancer service and a NodePort service in Kubernetes?
+ Solution: LoadBalancer services require the use of an external load balancer, while NodePort services do not.
+
+Q-15: In a service mesh architecture, how do the proxies communicate with each other?
+ Solution: Through a data plane
+
+Q-16: What is the term used to describe additional containers that support the main container in Kubernetes?
+ Solution: Sidecars
+
+Q-17: How can different applications in a Kubernetes cluster communicate with each other?
+ Solution: Through services
+
+Q-18: What is Istio known for in relation to complex deployments?
+ Solution: All options are valid
+ - Providing universal traffic management
+ - Enhancing security
+ - Enabling telemetry and monitoring
+
+Q-19: What technology does Istio utilize to implement proxies for service communication?
+ Solution: Envoy
+
+Q-20: Which of the following tasks are typically performed by sidecar containers in Kubernetes?
+ Solution: Log shipping, monitoring, file loading, and proxying
+
+Q-21: Which of the following is NOT one of the three types of services in Kubernetes?
+ Solution: All of the options are types of services in Kubernetes
+ - NodePort
+ - ClusterIP
+ - LoadBalancer
+
+Q-22: What is the primary purpose of load balancing in a service mesh?
+ Solution: Routing traffic to healthy instances
+
+Q-23: Which component in Istio combines the three control plane components (Citadel, Pilot, and Galley) into a single daemon?
+ Solution: Istiod
+
+Q-24: Which of the following statements is true about Istio?
+ Solution: It provides a free and open-source solution for securing, connecting, and monitoring services.

@@ -1,0 +1,311 @@
+Q-1: Which of the following statements is true about the scope of roles and role bindings in Kubernetes?
+ Solution: Both roles and role bindings fall under the scope of namespaces.
+
+Q-2: Which of the following Kubernetes resources are cluster-scoped?
+ Solution: Persistent volumes
+
+Q-3: Where do we specify the pod labels in a Kubernetes network policy definition file?
+ Solution: spec.podSelector
+
+Q-4: What is the kubectl command to change the current context?
+ Solution: kubectl config use-context <context>
+
+Q-5: What does the context section define in the kubeconfig file?
+ Solution: The mapping between user accounts and Kubernetes clusters
+
+Q-6: Which of the following commands is used to generate a token for a service account in Kubernetes version 1.24?
+ Solution: kubectl create token <service-account-name>
+
+Q-7: Which of the following Kubernetes resources are namespaced
+ Solution: All options are valid
+ - Pods
+ - Deployments
+ - Roles
+
+Q-8: What is the default authorisation mode for the Kube-api server if the 'authorisation mode’ option is not specified?
+ Solution: AlwaysAllow
+
+Q-9: What is used to authorize users to cluster-wide resources like nodes and persistent volumes in Kubernetes?
+ Solution: Cluster roles and cluster role bindings
+
+Q-10: When configuring security settings at the pod level, what happens to the settings?
+ Solution: They apply to all containers within the pod.
+
+Q-11: What does the clusters section contain in the kubeconfig file?
+ Solution: Details of different Kubernetes clusters that you need access to
+
+Q-12: In a Kubernetes cluster, if you want to view the roles defined within a specific namespace, which command should you use?
+ Solution: kubectl get roles
+
+Q-13: What is the purpose of the named group APIs in Kubernetes?
+ Solution: To organize and provide access to newer features
+
+Q-14: What is the role of Open Policy Agent in a Kubernetes cluster with regard to authorisation?
+ Solution: It helps with admission control and authorisation by making API calls to decide whether a user should be permitted access based on their access requirements.
+
+Q-15: What is the purpose of the “library” in the image name (library/nginx)?
+ Solution: It is the default account where Docker’s official images are stored.
+
+Q-16: Which of the following is true about the format of the sections in the kubeconfig file?
+ Solution: Each section is in an array format.
+
+Q-17: Which of the following solutions support Kubernetes network policies?
+ Solution: Kube router, calico, and weave-net
+
+Q-18: Which of the following statements are true about the resources in the apps subgroup of the named group in Kubernetes API?
+ Solution: Each resource in the apps subgroup has a set of actions associated with it.
+
+Q-19: What is the relationship between the secret object and the service account in Kubernetes?
+ Solution: The secret object is linked to the service account and stores the service account token.
+
+Q-20: What is the authorisation mode that allows all requests without performing any authorisation checks?
+ Solution: AlwaysAllow
+
+Q-21: What is the role of the node authoriser in Kubernetes cluster?
+ Solution: Handles requests from the kubelets on nodes to the kube-apiserver
+
+Q-22: Which keyword is used in a cluster role definition file to create a cluster role?
+ Solution: kind: ClusterRole
+
+Q-23: What happens when you configure security settings at both the pod and container levels in Kubernetes?
+ Solution: The settings at the container level override the settings at the pod level.
+
+Q-24: Can Kubernetes manage service accounts?
+ Solution: Yes, Kubernetes provides built-in capabilities to manage service accounts.
+
+Q-25: What field can be added to the kubeconfig file to specify a default context to use when multiple contexts are defined?
+ Solution: current-context
+
+Q-26: Which DNS name is used for Google’s Docker registry?
+ Solution: gcr.io
+
+Q-27: What approach is commonly used to implement authorization in a Kubernetes environment,
+ where users are assigned specific permissions based on their group associations?
+ Solution: Role-based access control (RBAC) for defining user permissions
+
+Q-28: What is Docker’s default registry?
+ Solution: Docker Hub
+
+Q-29: Which of the following statements is true about the default behavior of kubectl tool?
+ Solution: kubectl looks for a file named config under a directory .kube in the user’s home directory.
+
+Q-30: What is Role-Based Access Control (RBAC)?
+ Solution: It is a way of creating a role with a set of permissions required for a specific group and then associating
+ users to that role.
+
+Q-31: What is the purpose of the Docker registry secret type in Kubernetes?
+ Solution: To store Docker credentials for accessing private registries
+
+Q-32: Can you edit the service account of an existing deployment in Kubernetes?
+ Solution: Yes, by modifying the deployment manifest file and updating the service account field.
+
+Q-33: What are the different subgroups of the Kubernetes API?
+ Solution: APIs, Healthz, Metrics, Logs
+
+Q-34: How can we specify the secret to our private registry inside our pod definition file?
+ Solution: By specifying the secret under the imagePullSecrets section in the pod definition file
+
+Q-35: What format is used to define a set of policies in Attribute-based authorisation?
+ Solution: JSON format
+
+Q-36: Which command would you use to see a full list of non-namespaced resources in Kubernetes?
+ Solution: kubectl api-resources --namespaced=false
+
+Q-37: How can you choose not to automatically mount a service account token to a Kubernetes pod?
+ Solution: By setting the automountServiceAccountToken field to false in the pod’s spec
+
+Q-38: What additional field can be added to the context section in the kubeconfig file to specify a particular namespace?
+ Solution: namespace
+
+Q-39: Which authentication methods can be used to control access to the API server in a Kubernetes environment,
+ as mentioned in the given content?
+ Solution: All the options are correct
+ - Two-factor authentication (2FA) using tokens
+ - Integration with external authentication providers like LDAP
+ - User IDs and passwords stored in static files
+
+Q-40: Where do we build our network rules in a Kubernetes network policy definition file?
+ Solution: Ingress or Egress section
+
+Q-41: In Kubernetes, how are resources categorized based on their scope?
+ Solution: As namespaced or clusters scoped
+
+Q-42: Which technique can be used to link a network policy to a pod in Kubernetes?
+ Solution: Labels and selectors
+
+Q-43: What command do you use to list all the service accounts in a Kubernetes cluster?
+ Solution: kubectl get serviceaccount
+
+Q-44: What is the purpose of Kube Proxy in a Kubernetes cluster?
+ Solution: It is used to enable connectivity between pods and services across different nodes in the cluster.
+
+Q-45: How does Kubernetes manage user accounts by default?
+ Solution: Kubernetes uses a third-party identity service like LDAP to manage user accounts.
+
+Q-46: What is the default service account created for every namespace in Kubernetes?
+ Solution: default
+
+Q-47: Which of the following statements is true about Kubernetes network policies?
+ Solution: Kubernetes is configured by default with an “All Allow” rule that allows traffic from any pod to any other pods or services.
+
+Q-48: Which of the following is a subgroup of the named group in Kubernetes API?
+ Solution: All the options are correct
+ - apps
+ - extensions
+ - networking.k8s.io
+
+Q-49: Which feature can be used to restrict access between the pods in a cluster?
+ Solution: Network Policies
+
+Q-50: Which of the following API groups contain core functionality in Kubernetes?
+ Solution: core group
+
+Q-51: What command should you use to impersonate another user and check their permission
+ to create deployments in a Kubernetes cluster?
+ Solution: kubectl auth can-i create deployments --as <user>
+
+Q-52: Which of the following commands is used to see a full list of Kubernetes namespaced resources?
+ Solution: kubectl api-resources –namespaced=true
+
+Q-53: Which of the following measures should be taken to secure a Kubernetes infrastructure and ensure
+ secure access to the cluster’s hosts?
+ Solution: Disable root access and password-based authentication on the hosts.
+
+Q-54: Which field should be added to the specs section of a pod in order to configure security context on a pod in Kubernetes?
+ Solution: securityContext
+
+Q-55: What is a service account in Kubernetes?
+ Solution: An account used by an application to interact with a Kubernetes cluster
+
+Q-56: Which of the following sections are included in the kubeconfig file?
+ Solution: Clusters, Users, and Contexts
+
+Q-57: What is the purpose of Kubernetes network policy?
+ Solution: To restrict traffic to a specific pod or set of pods in the cluster
+
+Q-58: What are the two sections of the RoleBinding object?
+ Solution: Subjects and RoleRef
+
+Q-59: What API version and kind do you need to set to create a role object in Kubernetes using a role definition file?
+ Solution: API version: rbac.authorization.k8s.io/v1 , kind: Role
+
+Q-60: Which field can be used to provide the contents of a certificate itself instead of using
+ certificate-authority and the path to the file?
+ Solution: certificate-authority-data
+
+Q-61: What command should you use to list all the role bindings in a Kubernetes cluster?
+ Solution: kubectl get rolebindings
+
+Q-62: What field can you use to allow access to specific resources alone in Kubernetes?
+ Solution: resourceNames field
+
+Q-63: Which component in a Kubernetes cluster handles all user requests from the kubectl utility or direct API access?
+ Solution: Kube-api server
+
+Q-64: What are the two groups into which the Kubernetes APIs responsible for cluster functionality are categorized?
+ Solution: Core group and named group
+
+Q-65: What do you need to do before providing the contents of the certificate file in the certificate-authority-data
+ field of the kubeconfig file?
+ Solution: Base-64 encode the content.
+
+Q-66: What statement/s is/are true about the service account of an existing pod in Kubernetes?
+ Solution: The service account is set when the pod is created and cannot be changed afterward.
+
+Q-67: Which of the following statements is true regarding Kube Proxy and Kubectl Proxy?
+ Solution: Kube Proxy and Kubectl Proxy are different things.
+
+Q-68: What command can you use to log in to your private Docker registry?
+ Solution: docker login
+
+Q-69: What is the purpose of the version API in Kubernetes?
+ Solution: To view the version of the cluster
+
+Q-70: What is the kubectl command to use a kubeconfig file other than the default one?
+ Solution: kubectl config view --kubeconfig=my-config
+
+Q-71: What are the characteristics of tokens generated by the Kubernetes Token Request API?
+ Solution: Audience bound, time bound, and object bound
+
+Q-72: Which of the following resources belong to the “apps” subgroup in Kubernetes?
+ Solution: deployments, replicasets
+
+Q-73: Can you create or view users directly within a Kubernetes cluster?
+ Solution: No, Kubernetes does not support creating or viewing users within the cluster.
+
+Q-74: In a Kubernetes cluster, what determines the actions and operations a user can perform once
+ they have been authenticated?
+ Solution: Authorization mechanisms
+
+Q-75: What does the users section contain in the kubeconfig file?
+ Solution: Details of the user accounts that you have access to in the Kubernetes cluster
+
+Q-76: Which Kubernetes API is used to monitor the health of the cluster?
+ Solution: metrics and healthz
+
+Q-77: Which of the following modules can be used as part of the authorization process in a Kubernetes environment?
+ Solution: Node Authorizater modules and Attribute-based access control (ABAC) modules
+
+Q-78: What is the behavior of the AlwaysDeny authorisation mode in Kubernetes?
+ Solution: Denies all requests
+
+Q-79: If you have only the ingress in the policyTypes, what does it mean?
+ Solution: Only the ingress traffic is isolated, and all egress traffic is unaffected.
+
+Q-80: Which of the following statements is true regarding service accounts in Kubernetes version 1.24?
+ Solution: When a service account is created, it no longer automatically creates a secret or a token access secret.
+
+Q-81: Which of the following statements is true about using KubeConfig in kubectl?
+ Solution: KubeConfig is a file that contains Kubernetes configuration information.
+
+Q-82: What is the purpose of a cluster role binding object in Kubernetes?
+ Solution: To link a cluster role to a user/group
+
+Q-83: Which security mechanism is used to ensure secure communication between the various components of a cluster,
+ including the ETCD cluster, Kube controller, API server, and worker node components?
+ Solution: TLS encryption
+
+Q-84: Which command is used to create a service account in Kubernetes?
+ Solution:
+ - kubectl create sa <account-name>
+ - kubectl create serviceaccount <account-name>
+
+Q-85: What command should you use to view more details about a specific role in a Kubernetes cluster?
+ Solution: kubectl describe role <role-name>
+
+Q-86: What is the purpose of a RoleBinding object in Kubernetes?
+ Solution: It links a user object to a role.
+
+Q-87: If you create a cluster role for namespaced resources, what access do the users get?
+ Solution: Access to all resources across all namespaces in the cluster
+
+Q-88: How can you create a role in Kubernetes using the command line interface?
+ Solution: kubectl create role
+
+Q-89: Which kubectl command can be used to view the current kubeconfig file being used?
+ Solution: kubectl config view
+
+Q-90: What command should you use to check if you have access to create deployments in a Kubernetes cluster?
+ Solution: kubectl auth can-i create deployments
+
+Q-91: What is Kubectl Proxy used for?
+ Solution: To access the kube-api server via an HTTP proxy service.
+
+Q-92: What is the difference between ingress and egress traffic in a web server?
+ Solution: Ingress traffic is incoming traffic and egress traffic is outgoing traffic.
+
+Q-93: What field should be added to a pod definition file to use a service account other than the default one in Kubernetes?
+ Solution: serviceAccountName
+
+Q-94: Who is authorized by the node authorisers to make requests to kube-apiserver?
+ Solution: Any requests coming from a user with the name system node and part of the system nodes group
+
+Q-95: What command can be used to view the contents of a secret object in Kubernetes?
+ Solution: kubectl describe secret <token-name>
+
+Q-96: What is attribute-based authorization?
+ Solution: A type of authorization where users are associated with a set of permissions.
+
+Q-97: In the context of a Docker image name in a Kubernetes pod definition file, when the image name is provided
+ without a prefix, what does the prefix usually represent, and what is the default value assumed if none is provided?
+ Solution: It specifies the user or account name, and the default value is library.

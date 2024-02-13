@@ -1,0 +1,12 @@
+- The prometheus configuration file "prometheus.yml" is in the /etc/prometheus directory
+
+- prometheus.yaml architecture:
+  - The global section contains default parameters for all other config sections
+  - The scrape section define targets and configs for metrics collection
+
+- Check the prometheus scrape configuration example
+
+- To restart prometheus after manual changes you can follow one of the following ways:
+  - kill -HUB <pid>
+  - ctrl+c -> ./prometheus
+  - systemctl restart prometheus

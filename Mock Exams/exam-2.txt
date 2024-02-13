@@ -1,0 +1,153 @@
+Q-1: What role requires experience with programming languages as well as operational tools such as deployment,
+ monitoring, and logging?
+ Answer: DevOps Engineer
+
+Q-2: You are configuring authentication for your Kubernetes cluster and are considering various methods.
+ Why is using a static password or token file generally not recommended for authenticating users in Kubernetes?
+ Answer: static files are cleartext files that can be easily shared among users, compromising security
+
+Q-3: In cloud-native architecture, what approach allows you to define the desired outcome of the architecture
+ without writing a step-by-step procedure to achieve a goal?
+ Answer: Declarative Approach
+
+Q-4: In the event that the Kubernetes control plane becomes unavailable, what happens to the existing pods
+ that are running on a cluster?
+ Answer: existing pods on the cluster will continue to run without interruption
+
+Q-5: What are the benefits of implementing a plugin architecture for various Kubernetes components,
+ including CSI, CNI, and SMI interfaces?
+ Answer: users can select the service or solution that suits their needs without vendor or technological lock-in concerns.
+
+Q-6: How can namespaces be used in Kubernetes to divide a cluster into virtual clusters, providing isolation and organization?
+ Answer: by partitioning the cluster into isolated namespaces
+
+Q-7: You have a Kubernetes cluster with nodes that have specialized hardware accelerators (e.g., GPUs) and nodes
+ without accelerators. You want to ensure that a specific set of pods, labeled as app=ml-app,
+ always run on nodes with GPUs to maximize performance.
+ Which Kubernetes feature should you use for this purpose?
+ Answer: Node Affinity
+
+Q-8: You're managing a Kubernetes cluster with different user groups, each with its own resource
+ allocation and scheduling needs. To address this, you've started using Kubernetes Scheduler Profiles.
+ What is the purpose of Scheduler Profiles?
+ Answer: define custom scheduling rules and configure the different stages of scheduling in the kube-scheduler
+
+Q-9: Which tool would you use to simplify the installation and management of a complex web application
+ on a Kubernetes cluster on Kubernetes?
+ Answer: Helm
+
+Q-10: What is the primary function of the Kubernetes project?
+ Answer: a platform for scheduling and managing containers at scale
+
+Q-11: Which organization is responsible for maintaining the Kubernetes project and serves as the governing body
+ for any updates and changes?
+ Answer: Cloud Native Computing Foundation (CNCF)
+
+Q-12: Which is NOT a benefit of using open standards when developing or integrating different technologies?
+ Answer: helps lock in users to a particular vendor or product
+
+Q-13: What is the difference between static pods and pods created using DaemonSets? (select two)
+ Answer:
+ - DaemonSets are created by the kube-api server
+ - static pods are created by the local kubelet running on each node
+
+Q-14: What are the benefits of using Git to store and manage both infrastructure and application code?
+ Answer: Git allows you to track changes, revert to previous versions, and collaborate effectively for infrastructure resources and applications
+
+Q-15: When using a GitOps practice, what happens when a merge request is approved to a Git repository?
+ Answer: Changes are automatically applied to the target system or platform
+
+Q-16: Which of the following is NOT a valid Kubernetes SIG?
+ Answer: certification
+
+Q-17: Which of the following statements best describes how a Kubernetes manifest uses a declarative model?
+ Answer: Kubernetes manifests define the desired state of resources and let Kubernetes reconcile the current state with the desired state.
+
+Q-18: What architecture is commonly associated with breaking up a larger, monolith application into smaller,
+ loosely coupled services that represent a specific function or application?
+ Answer: microservices
+
+Q-19: Which of the following is a cloud-native architecture that allows developers to run custom server-side code in
+ containers that are commonly managed by a cloud service provider?
+ Answer: serverless
+
+Q-20: Prometheus follows what type of model for collecting metrics from target systems?
+ Answer: Pull-Based Model
+
+Q-21: What Kubernetes feature will ensure the scheduler distributes an application across user-defined fault zones,
+ such as physical nodes?
+ Answer: pod topology spread constraints
+
+Q-22: Which of the following is NOT one of the guiding principles of GitOps?
+ Answer: changes are frequently done via manual changes
+
+Q-23: What is the term for the process of bringing the observed state of an application or system in line with
+ the desired state?
+ Answer: reconciliation
+
+Q-24: What is the main purpose of using namespaces in Kubernetes?
+ Answer: segregate pods, services, and other resources into distinct virtual clusters within a single physical cluster
+
+Q-25: What limitation is associated with using node selectors in Kubernetes for pod scheduling?
+ Answer: node selectors are not suitable for handling complex node selection criteria
+
+Q-26: Which of the following best describes the benefits of observability of a system or application?
+ Answer: the ability to understand and measure the current and/or historical state of a system based on metrics
+ generated by the system or application
+
+Q-27: Which definition offers the most precise representation of logs within the context of system observability?
+ Answer: records of events that have occurred which contain information about a specific event
+
+Q-28: What cloud-native architecture feature enables the ability for an application or service to adjust resources based
+ on user demand automatically?
+ Answer: autoscaling
+
+Q-29: Which best represents the definition of Continuous Integration (CI)?
+ Answer: Automating the building and testing of application code with the goal of identifying issues before
+ they reach the live environment.
+
+Q-30: What component in a Kubernetes cluster is responsible for running workloads and applications?
+ Answer: node
+
+Q-31: Prometheus is an open-source monitoring tool designed to collect data from systems. From the list below, what type
+ of data is Prometheus designed to collect?
+ Answer: metrics
+
+Q-32: What is the name of the collective group of individuals responsible for overseeing the overall direction
+ of the Kubernetes project in the CNCF?
+ Answer: Kubernetes Steering Committee
+
+Q-33: What is the primary purpose of using 'Pod Anti-Affinity' in Kubernetes scheduling?
+ Answer: to prevent pods from being scheduled on the same node, promoting fault tolerance and reliability
+
+Q-34: You are deploying a multi-tier application that includes a frontend and backend service.
+ You want the frontend service to automatically find and connect to only healthy backend service instances.
+ Which cloud-native networking solution would help meet this requirement?
+ Answer: Service Discovery
+
+Q-35: What component of Kubernetes is responsible for downloading the image and starting the container?
+ Answer: container runtime
+
+Q-36: Rather than running a container directly, what does Kubernetes use to schedule and run the container?
+ Answer: a Pod
+
+Q-37: What is a container in the context of computing and software development?
+ Answer: a standardized and isolated package used to run applications that include an application and all its dependencies
+
+Q-38: Which of the following are key concepts to building a resilient and self-healing application? (select four)
+ Answer:
+ - ability to automatically adjust the resources based on demand, also known as autoscaling
+ - reconciliation to execute commands or tasks as needed
+ - ongoing observability to understand the current state of the application
+ - the application is defined as code, otherwise known as a desired state
+
+Q-39: When measuring the performance of a system, SLO/SLA/SLI are commonly used to define targets or goals.
+ What does the acronym SLI stand for?
+ Answer: Service Level Indicator
+
+Q-40: In Kubernetes, what typically happens when an image specified in a pod's configuration cannot be
+ downloaded during deployment?
+ Answer: The pod remains in a pending state until the image becomes available.
+
+Q-41: Why might you use multiple custom schedulers alongside the default scheduler in Kubernetes?
+ Answer: to accommodate different workload requirements and policies

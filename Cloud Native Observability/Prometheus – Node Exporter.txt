@@ -1,0 +1,2 @@
+- After installing Node Exporter, verify if it's running by curling port 9100:
+  curl http://localhost:9100/metrics

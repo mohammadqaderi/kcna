@@ -1,0 +1,21 @@
+- Istio is a free and open source service mesh that provides an efficient way to secure, connect and monitor services.
+
+- Istio works with Kubernetes and traditional workloads.
+
+- Istio implements these proxies using an open source and high performance proxy known as Envoy.
+  And the proxies talked to a server-side component known as control plane.
+
+- The controlplane consists of three components:
+  - Pilot: help with service discovery
+  - Citadel: manage certificate generation
+  - Galley: validate configuration files
+
+- The three components combined into a single daemon called Istiod
+
+- Each service or pod has a separate component on it along with Envoy proxy called the Istio Agent.
+
+- The Istio Agent is responsible for passing the configuration secrets to the Envoy proxies.
+
+- Install istio using istioctl
+  istioctl install --set profile=demo -y
+  istioctl verify-install

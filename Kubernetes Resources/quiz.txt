@@ -1,0 +1,209 @@
+Q-1: How can you create a new namespace in Kubernetes?
+ Solution:
+ - Use kubectl create namespace
+ - Use kubectl create -f namespace-def.yaml
+
+Q-2: How can you check the status of a deployment rollout in Kubernetes?
+ Solution: Use the command kubectl rollout status [deployment-name].
+
+Q-3: To list pods in the “kube-system” namespace, which command should you use?
+ Solution: kubectl get pods --namespace=kube-system
+
+Q-4: Where should the user input be specified for the labels in a ReplicaSet’s selector?
+ Solution: matchLabels
+
+Q-5: In Kubernetes, which approach involves running the ‘kubectl apply’ command to create, update, or delete an object?
+ Solution: Declarative approach
+
+Q-6: How can you view the created Replicaset in Kubernetes?
+ Solution: kubectl get replicaset
+
+Q-7: To connect a web-app pod in the default namespace to a service named “db-service” in the “dev” namespace,
+ what is the correct hostname format
+ Solution: db-service.dev.svc.cluster.local
+
+Q-8: Regardless of the approach used to create an object in Kubernetes, what does Kubernetes use to store information
+ about the object internally?
+ Solution: Live configuration on the Kubernetes cluster
+
+Q-9: What is the recommended approach for expanding the physical capacity of a Kubernetes cluster when the current node
+ lacks sufficient capacity?
+ Solution: Deploy additional pods on a new node in the cluster to expand the cluster’s physical capacity.
+
+Q-10: How can you switch to a specific namespace permanently in Kubernetes, so that you don’t have to specify
+ the namespace option each time you run a command?
+ Solution: Use the kubectl config set-context $(kubectl config current-context) --namespace=
+
+Q-11: By default, when a Docker container is deployed within a pod, how can users access the application?
+ Solution: Only through direct SSH access to the container
+
+Q-12: When using the kubectl apply command to create an object in Kubernetes, what happens to the YAML version of
+ the local object config file?
+ Solution: It is converted to a JSON format and stored as the last applied configuration.
+
+Q-13: When using a replication controller in Kubernetes, how can you specify the number of replicas
+ (instances) of a pod that should be running?
+ Solution: Specify the number of replicas in the “replicas” property under the pod’s spec section.
+
+Q-14: How can you update a replica set to scale from 3 replicas to 6 replicas?
+ Solution: Modify the number of replicas in the definition file and use the “kubectl apply” command.
+
+Q-15: When a new deployment is created, what is the result of the rollout process?
+ Solution: Creation of a new deployment revision
+
+Q-16: Which namespace in Kubernetes is created at cluster startup and contains internal services
+ required for networking and DNS?
+ Solution: kube-system
+
+Q-17: To view all the objects created after a deployment, which command can you use?
+ Solution: kubectl get all
+
+Q-18: How do you apply changes to a modified Kubernetes deployment object using a definition file called “deployment-def.yml”?
+ Solution: kubectl apply -f deployment-def.yml
+
+Q-19: Which approach is used to specify what actions should be performed in Kubernetes without specifying
+ how they should be executed?
+ Solution: Declarative Approach
+
+Q-20: Why would you create separate namespaces for dev and production environments in Kubernetes?
+ Solution: To isolate resources and prevent accidental modifications in one environment affecting the other
+
+Q-21: You want to create a pod in the “dev” namespace instead of the default namespace using a YAML
+ manifest file called “pod-def.yml”. Which command should you use to achieve this?
+ Solution: kubectl apply -f pod-def.yml --namespace=dev
+
+Q-22: Why is the template section required in the replica set specification, even if there are existing pods with matching labels?
+ Solution: The template section is required to create new pods when needed.
+
+Q-23: Which command is used to view the list of pods in a Kubernetes cluster?
+ Solution: kubectl get pods
+
+Q-24: What does the ‘kubectl apply’ command do in the declarative approach of managing objects in Kubernetes?
+ Solution:
+ - Creates a new object based on the provided configuration
+ - Updates an existing object based on the provided configuration
+
+Q-25: What is the default deployment strategy in Kubernetes where the application never goes down during the update?
+ Solution: Rolling update
+
+Q-26: In a Kubernetes definition file, how is the “metadata” field typically defined?
+ Solution: dictionary structure
+
+Q-27: How can you rollback a Kubernetes deployment to a previous revision?
+ Solution: kubectl rollout undo deployment/my-deployment
+
+Q-28: Which approach is used to specify specific actions and how should they be performed in Kubernetes?
+ Solution: Imperative approach
+
+Q-29: What command can you use to update the image of your application in a Kubernetes deployment without modifying
+ the deployment definition file?
+ Solution: kubectl set image deployment/my-deployment my-container=new-image:tag
+
+Q-30: Which API version would you typically use when creating a Pod object in a Kubernetes definition file?
+ Solution: v1
+
+Q-31: Which of the following fields are required in a Kubernetes definition file?
+ Solution: apiVersion, kind, metadata, spec
+
+Q-32: Why is the use of a replication controller important in Kubernetes?
+ Solution: All options are valid
+ - It manages the replication of pods for load balancing purposes.
+ - It helps to automatically recover and replace failed pods.
+ - It ensures that multiple instances of a pod are running to provide high availability.
+
+Q-33: What is the purpose of a Deployment in Kubernetes?
+ Solution: Managing and upgrading the underlying instances seamlessly using rolling updates
+
+Q-34: How can you view the list of created deployments in Kubernetes?
+ Solution: kubectl get deployments
+
+Q-35: How can you create a pod in Kubernetes using a YAML file named “pod-definition.yml”?
+ Solution: Run the command “kubectl create -f pod-definition.yml”.
+
+Q-36: What command would you use to view the list of created replication controllers in Kubernetes?
+ Solution: kubectl get rc
+
+Q-37: In which Kubernetes namespace are the resources created that should be made available to all users?
+ Solution: kube-public namespace
+
+Q-38: What is the smallest object that can be created in Kubernetes?
+ Solution: Pod
+
+Q-39: What is the advantage of having multiple containers within the same pod in Kubernetes?
+ Solution: It enables the containers to share the same network namespace and storage volumes.
+
+Q-40: How can you limit resources in a namespace in Kubernetes?
+ Solution: Use the kubectl create -f quota-definition.yaml command and provide a definition file with the kind as
+ ResourceQuota, namespace, and resource limits.
+
+Q-41: What are the two strategies for making deployments in Kubernetes?
+ Solution: Recreate and rolling update strategies
+
+Q-42: How can you update the number of replicas in a replica set using the kubectl scale command?
+ Solution: Use the “kubectl scale” command with the name of the replica set and provide the new number of replicas with the replicas parameter.
+
+Q-43: How does a replica set know which pods to monitor?
+ Solution: It uses labels to filter and select the pods to monitor.
+
+Q-44: When you create a deployment in Kubernetes, what additional objects are automatically created alongside the deployment?
+ Solution: ReplicaSet and Pods
+
+Q-45: What is the purpose of assigning quotas to Kubernetes namespaces?
+ Solution: To restrict the amount of CPU and memory resources that can be utilized by objects within a namespace
+
+Q-46: Why are deployment rollouts and revisions important in Kubernetes?
+ Solution: They allow for tracking changes made to the deployment.
+
+Q-47: Which of the following commands are considered as imperative approaches to managing objects in Kubernetes?
+ Solution: kubectl run
+
+Q-48: In a Kubernetes definition file, why is the “containers” property within the “spec” section defined as a list
+ or an array?
+ Solution: It supports the deployment of multiple containers within the pod.
+
+Q-49: How can you view pods in all namespaces in Kubernetes?
+ Solution: Use the kubectl get pods --all-namespaces command.
+
+Q-50: What is the correct API version to use in the replication controller definition file?
+ Solution: v1
+
+Q-51: How can you view detailed information about a specific pod named “my-app-pod” in Kubernetes?
+ Solution: Run the command “kubectl describe pod my-app-pod”.
+
+Q-52: Is the “selector” field a required field in a ReplicationController?
+ Solution: No, the selector field is not a required field in a ReplicationController.
+
+Q-53: What is the role of a Replicaset in Kubernetes?
+ Solution: To monitor and scale pods
+
+Q-54: Why does a ReplicaSet require a selector definition, even if the pod definition is provided in the template?
+ Solution: The selector helps the ReplicaSet identify pods that were created before the ReplicaSet.
+
+Q-55: Why is it beneficial to use labels in Kubernetes when deploying multiple pods?
+ Solution: Labels allow for easy grouping and filtering of pods based on their characteristics.
+
+Q-56: In Kubernetes, which namespace is automatically created by Kubernetes when the cluster is first set up?
+ Solution: kube-system and default namespaces
+
+Q-57: In a Kubernetes definition file, the “kind” field is used to specify:
+ Solution: The type of object being created
+
+Q-58: How can you view the history and revisions of a deployment rollout in Kubernetes?
+ Solution: Use the command kubectl rollout history [deployment-name].
+
+Q-59: When scaling an application in Kubernetes to handle increased user load, how are additional instances typically created?
+ Solution: By creating a new pod altogether with a new instance of the same application
+
+Q-60: What is the primary role of controllers in Kubernetes?
+ Solution: They monitor Kubernetes objects and take appropriate actions based on their state.
+
+Q-61: When using the kubectl apply command in Kubernetes, which of the following sources does it
+ consider before deciding what changes to make?
+ Solution: The local configuration file, live object definition file in Kubernetes memory, and the last applied configuration
+
+Q-62: What parameter is used with the “kubectl run” command to specify the application image when deploying
+ a Docker container as a pod?
+ Solution: --image
+
+Q-63: Why is the “last applied configuration” feature useful in Kubernetes?
+ Solution: It helps identify fields that have been removed from the local configuration file.

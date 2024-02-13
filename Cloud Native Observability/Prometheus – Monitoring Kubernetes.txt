@@ -1,0 +1,23 @@
+- Benefits of using prometheus in Kubernetes environment:
+  - Monitor applications running on Kubernetes infrastructure
+  - Monitor Kubernetes Cluster
+    - Control-Plane Components (api-server, coredns, kube-scheduler)
+    - Kubelet(cAdvisor) - exposing container metrics
+    - Kube-state-metrics - cluster level metrics (deployments, pod metrics)
+    - Node-exporter - Run on all nodes for host related metrics(cpu, mem, network)
+
+- Kube-state-metrics: To collect cluster level metrics(pods, deployments, etc) the kube-state-metrics container must be deployed
+
+- Node-exporter:
+  - Every host should run a node_exporter to expose cpu, memory, and network stats
+  - We can manually go and install a node_exporter on every node
+  - Better option is to use a Kubernetes daemonSet - pod that runs on every node in the cluster
+
+- How to deploy?
+  - Manually deploy Prometheus on Kubernetes Create all the deployments, services, config Maps, and secrets
+  - Complex, requires a lot of configuration, not the easiest solution
+  - Best way to deploy prometheus is by using Helm chart to deploy the prometheus operator
+
+- The Kube-Prometheus-stack chart makes use of the Prometheus Operator
+- A Kubernetes operator is an application-specific controller that extends the K8s API to create/configure/manage
+  instances of complex applications(like Prometheus!)

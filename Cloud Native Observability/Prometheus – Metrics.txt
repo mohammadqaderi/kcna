@@ -1,0 +1,62 @@
+- The metric consists of the following:
+  - name
+  - labels
+  - value
+- Example of metric:
+  node_cpu_seconds_total{cpu="0",mode="idle"} 258983.22
+
+- When Prometheus scrapes a target and retrieves metrics, it also stores the time at which the metric was scraped as well.
+- The timestamp will look like this: 1668215300
+- This is called a unix timestamp, which is the number of seconds that have elapsed since Epoch (January 1st 1970 UTC)
+
+- Prometheus Time series: Stream of timestamped values sharing the same metric and set of labels
+
+- Metrics have a TYPE and HELP attribute
+  - the help attribute provides a description of the metric is
+  - the type attribute specifies what type of metric (counter, gauge, histogram, summary)
+
+- Metrics Types
+  - Counter:
+    - How many times did X happen
+    - Number can only increase
+    - Examples: Total Requests, Total Exceptions, Total number of job exceptions
+  - Gauge:
+    - What's the current value of X
+    - Can go up or down
+    - Examples: Current CPU Utilization, Available System Memory, Number of concurrent requests
+  - Histogram:
+    - How long or how big something is
+    - Groups observations into configurable bucket sizes
+    - Examples: Response Time, Request Size
+  - Summary:
+    - Similar to histogram (How long or how big something is)
+    - How many observations fell below X
+    - Don't have to define quantiles ahead of time
+    - Examples: Response Time (With percentages), Request Size (With percentages)
+
+- Metrics Rules:
+  - Metric name specifies a general feature of a system to be measured
+  - May contain ASCII letters, numbers, underscores, and colons
+  - Must match the regex [a-zA-Z_:][a-zA-Z0-9_:]*
+  - Colons are reserved only for recording rules
+
+- Labels:
+  - Labels are Key-Value pairs associated with a metric
+  - Allows you to split up a metric by a specified criteria
+  - Metric can have more than one label
+  - ASCII letters, numbers, underscores
+  - Must match regex [a-zA-Z0-9_]*
+
+- To calculate the total number of requests for a particular endpoint use the following:
+  - sum(requests_total)
+  - requests_total: is a global metric that can dynamically used for any endpoint
+
+- We can use multiple labels:
+  - requests_total{path=/auth, method=get}
+  - requests_total{path=/auth, method=post}
+
+- Everything behind the scenes is just a label
+  - Labels surrounded by __ are considered internal to prometheus
+  - node_cpu_seconds_total{cpu=0} -> {__name__=node_cpu_seconds_total, cpu=0}
+
+- Every metric is assigned by 2 labels by default(instance and job)

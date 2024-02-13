@@ -1,0 +1,59 @@
+- Within the main Prometheus component, there are three parts of it:
+  - Data Retrieval Worker: Responsible for collecting the metrics from the target
+  - TSDB (Time series database): is just where we store all the metrics
+  - HTTP Server: is just there to allow us to retrieve the data that we stored in the database
+
+- Exporters: are just little mini processes that run on your targets that are responsible for serving up the metrics so
+  that the retrieval node is able to actually pull the metrics.
+  - For that, Prometheus uses the pull metrics method.
+
+- Anytime you've a short-lived job where we need to be able to push data to a PushGateway, and then prometheus can then
+  query the data from the gateway like any other target.
+
+- Service discovery provides a list of targets for prometheus to escape so that you don't have to hardcode those values.
+
+- Prometheus collects metrics sending http requests to endpoint of each target
+- Prometheus can be configured to use a different path other than /metrics
+
+- Most systems by default collect metrics and expose them on an HTTP endpoint to be consumed by a Prometheus server
+- Exporters collect metrics and expose them in a format Prometheus expects
+
+- Prometheus has several native exporters
+  - Node exporters(Linux servers)
+  - Windows
+  - MySQL
+  - Apache
+  - HAProxy
+
+- Prometheus comes with client libraries that allow you to expose any application metrics you need Prometheus to track
+Language support:
+ - Go
+ - Java
+ - Python
+ - Ruby
+ - Rust
+
+- Prometheus follows a pull-based model
+  - Prometheus needs to have a list of all targets it should scrape
+  - Other Pull based monitoring solutions include:
+    - Zabix
+    - nagios
+
+- In a pushed-based model, the targets are configured to push the metric data to the metrics server
+- Pushed based systems include:
+  - Logstash
+  - Graphite
+  - OpenTSDB
+
+- Some of the benefits of using a pull based system:
+  - Easier to tell if a target is down
+  - In a pushed based system we don't know if its down or has been decommissioned
+  - Push based systems could potentially overload metrics server if too many incoming connections get flooded at same time
+  - Pull based systems have a definitive list of targets to monitor, creating a central source of truth
+
+- Push based monitoring excels in the following areas:
+  - event-based systems, pulling data wouldn't be a viable option
+  - However, Prometheus is for collecting metrics and not monitoring events
+  - Short lived jobs, as they may end before a pull can occur
+  - Prometheus has feature called PushGateway to handle this situation
+

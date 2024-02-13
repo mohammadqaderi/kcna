@@ -1,0 +1,230 @@
+Q-1: When running a sidecar, what is the benefit of using a shared execution environment like the one found in
+ a Kubernetes Pod?
+ Answer: coordination and resource sharing between containers
+
+Q-2: When using a GitOps approach for continuous deployment and integration, what is the single source of truth for
+ applications, configurations, and the system's desired state?
+ Answer: A Git version control system (GitHub, GitLab, BitBucket, etc.)
+
+Q-3: You have many application workloads running on your Kubernetes cluster. You decide that the resources on Node1
+ and Node2 need to be dedicated to production workloads, so you apply a taint to the node using the NoSchedule effect.
+ However, the existing non-production workloads continue to run on Node1 and Node2.
+ What can you change to ensure non-production workloads are rescheduled on other nodes?
+ Answer: change the effect to NoExecute to ensure the non-production workloads will be evicted immediately
+
+Q-4: Your organization uses Kubernetes for its production workloads. As a DevOps Engineer, you must ensure that
+ the Kubernetes cluster has sufficient resources (nodes) to handle all application workloads but minimize costs when
+ the workload is reduced. What feature can you use to meet these requirements?
+ Answer: cluster autoscaler
+
+Q-5: You have a Kubernetes cluster with multiple worker nodes with different resource capacities. You've just created a
+ new pod with specific resource requirements. What is the role of the Kubernetes scheduler in this situation?
+ Answer: to ensure the pod is scheduled on a node with sufficient resources
+
+Q-6: The kubelet service on every worker node performs several functions. Which of the following is not one of them?
+ Answer: downloads images needed to start containers
+
+Q-7: You are managing a Kubernetes cluster for a web application. The application requires periodic tasks, such
+ as database backups and log rotation. What is the primary reason for using a CronJob resource in Kubernetes to manage
+ these tasks?
+ Answer: schedule and automate recurring batch jobs or tasks
+
+Q-8: What is the correlation between a Service Level Indicator (SLI) and a Service Level Objective (SLO)?
+ Answer: SLO is a target or goal that defines an acceptable level of performance for one or more SLIs
+ over a certain period of time
+
+Q-9: Which of the following are true regarding kubeconfig files? (select three)
+ Answer:
+ - kubectl  command-line tool uses kubeconfig files to find the information it needs to communicate with the API server of a cluster
+ - it is commonly stored in the $HOME/.kube directory
+ - to organize information about clusters, users, namespaces, and authentication mechanisms
+
+Q-10: In a Kubernetes cluster, what is the purpose of using multiple schedulers?
+ Answer: to allow different users or teams to define their own scheduling policies and rules for pods
+
+Q-11: In the unfortunate event of a security incident, what benefits does a GitOps approach offer organizations as
+ they attempt to recover?
+ Answer: The system is defined as immutable code in a single source of truth, which can help recreate a new independent system.
+
+Q-12: What is one of the main obstacles that organizations encounter before implementing a CI/CD process for deploying
+ applications?
+ Answer: The absence of standardization and reliance on manual deployments that are prone to errors
+
+Q-13: What is a microservices architecture?
+ Answer: independent services built to work together to create an application
+
+Q-14: After Prometheus has successfully collected metrics from servers, what language is used to query and visualize
+ the data into dashboards and charts?
+ Answer: PromQL
+
+Q-15: Which of the following Kubernetes components are found on worker nodes? (select three)
+ Answer:
+ - kube-proxy
+ - container-runtime
+ - kubelet
+
+Q-16: Rather than storing sensitive data, such as API keys or passwords, directly in a resource definition file,
+ where should you securely store this information?
+ Answer: in a secret resource
+
+Q-17: What format or file type is used to create the manifest for defining a Kubernetes Pod?
+ Answer: YAML
+
+Q-18: You are managing a Kubernetes cluster with multiple worker nodes. You need to deploy a monitoring agent pod on each
+ node for monitoring purposes. Which Kubernetes resource type is most suitable for this task?
+ Answer: DaemonSet
+
+Q-19: Which of the following statements accurately describes Linkerd in the context of Kubernetes?
+ Answer: Linkerd is a service mesh option for Kubernetes that provides observability, security, and traffic management for microservices
+
+Q-20: Which of the following is NOT a benefit of adopting a GitOps approach for application deployment and management?
+ Answer: increased time to market
+
+Q-21: Which of the following are valid types of nodes found in a Kubernetes cluster? (select two)
+ Answer:
+ - control-plane nodes
+ - worker nodes
+
+Q-22: Containers are designed to be stateless and typically local data is considered ephemeral. What does this mean
+ for any data that is stored in a container?
+ Answer: Containers should not rely on the local filesystem for persistent data storage, and data will be destroyed when
+ the container is terminated
+
+Q-23: What does the acronym "CNI" stand for in the context of Kubernetes, and what role does it play in the container
+ orchestration environment?
+ Answer: CNI stands for Container Networking Interface. It is a specification and set of plugins that define how network
+ connectivity is established and managed for containers in a Kubernetes cluster.
+
+Q-24: You need to restrict the default communication between pods in a cluster. What feature can you use to accomplish this?
+ Answer: Network Policies
+
+Q-25: What is the definition of a static pod in Kubernetes?
+ Answer: a pod that is managed directly by the kubelet on an individual node.
+
+Q-26: What happens to the data stored in a container when the container is destroyed?
+ Answer: the data is deleted when the container is destroyed
+
+Q-27: What is the primary responsibility of the Kubernetes scheduler when it comes to pod placement on nodes in a cluster?
+ Answer: select an appropriate node based on resource requirements, node conditions, and other constraints
+
+Q-28: What are the benefits of using higher-level controllers rather than deploying pods directly on a node?
+ Answer: controllers add additional functionality such as scaling, resiliency, and rolling updates
+
+Q-29: What Kubernetes resource should you use to ensure that database pods have access to reliable and persistent storage?
+ Answer: Persistent Volume Claim (PVC)
+
+Q-30: How do controllers operate in Kubernetes to maintain cluster stability and desired configurations?
+ Answer: monitoring the desired state and reconciling it with the observed state
+
+Q-31: Collecting metrics in a containerized environment can be challenging since many workloads are short-lived.
+ What options can be used to successfully collect metrics in this environment using Prometheus? (select two)
+ Answer:
+ - collect metrics directly at the platform level using node-exporter
+ - use Container Advisor (cAdvisor) to export container-based metrics
+
+Q-32: Which of the following is true regarding the design of cloud-native applications and systems?
+ Answer: cloud-native applications and systems should be designed to expect and handle failures at any point within the system
+
+Q-33: What is another term commonly used to describe the serverless cloud-native development model?
+ Answer: Functions as a Service (FaaS)
+
+Q-34: You are responsible for monitoring an application from which you want to obtain metrics. However, the application
+ cannot be queried directly by Prometheus. What can you use to scrape these metrics and convert them into a format
+ that Prometheus supports?
+ Answer: Prometheus Exporter
+
+Q-35: You are managing a Kubernetes cluster for a company's microservices-based application. One of the development teams
+ is deploying a new pod in the default namespace, but they haven't specified any resource requirements in the
+ pod's definition file. What will be the result regarding resource limits for this pod?
+ Answer: a pod in Kubernetes will run with no limits on CPU and memory in a default namespace
+
+Q-36: Which job role is typically responsible for designing infrastructure and applications to be cloud-native?
+ Answer: Cloud Architect
+
+Q-37: What is the default container runtime on most modern Kubernetes clusters?
+ Answer: Containerd
+
+Q-38: What command is used to view information about all pods across all namespaces running on a Kubernetes cluster?
+ Answer: kubectl get pods --all-namespaces
+
+Q-39: In the Kubernetes architecture, where are all the Kubernetes objects defined?
+ Answer: Kubernetes API
+
+Q-40: In a Kubernetes cluster, what is the default communication behavior between pods when no explicit network policy is applied?
+ Answer: all incoming and outgoing network traffic is allowed for all pods
+
+Q-41: What is the primary purpose of the kubectl proxy command?
+ Answer: to create a secure tunnel for accessing the Kubernetes cluster's internal API server
+
+Q-42: Which of the following is true regarding containers running in the same pod? (select two)
+ Answer:
+ - the containers will always be scheduled on the same node
+ - the containers will have access to the same volumes and can share data
+
+Q-43: When was Kubernetes accepted to the Cloud Native Computing Foundation (CNCF)?
+ Answer: 2016
+
+Q-44: As an experienced Kubernetes administrator, you have an idea for a new feature of Kubernetes that you think others will
+ find useful.
+ What is the proper workflow to propose this idea and get it added to a future release?
+ Answer: write and submit a KEP and submit it to the proper SIG
+
+Q-45: You have created a Kubernetes definition file named web.yaml to deploy a fleet of web servers for your organization.
+ What command would you use to apply this new definition file to your cluster?
+ Answer: kubectl apply -f web.yaml
+
+Q-46: When creating a namespace, what resource types are included within a namespace? (select three)
+ Answer:
+ - deployments
+ - pods
+ - service accounts
+
+Q-47: You have a definition file named production.yaml for your workload but you have recently made changes to the file
+ and need to apply the changes to the existing objects. How can you apply these changes to the Kubernetes cluster?
+ Answer: run the command kubectl apply -f production.yaml to apply the changes
+
+Q-48: You have a high-performing app you want to schedule on the same node to minimize latency between an application
+ container and the data processing container. What scheduler feature can you use so the containers will be scheduled
+ on the same node?
+ Answer: Affinity
+
+Q-49: What are the benefits of using a GitOps tool to continuously reconcile the state of the infrastructure?
+ Answer: to ensure the system state matches the desired state as defined by code
+
+Q-50: Which Kubernetes components will you find running on a control plane node? (select four)
+ Answer:
+ - etcd
+ - API Server
+ - Controllers
+ - Scheduler
+
+Q-51: What is the primary purpose of the Container Runtime Interface (CRI) in Kubernetes?
+ Answer: provide a standardized interface for container runtimes to interact with the Kubernetes control plane
+
+Q-52: If you need to run a container as a root user due to specific application requirements,
+ what is a recommended practice to enhance security?
+ Answer: deploy the container in a separate namespace dedicated to root user containers
+
+Q-53: Your containerized application requires additional resources (memory) to increase performance.
+ What type of scaling is this referred to as?
+ Answer: Vertical Scaling
+
+Q-54: What is a Kubernetes Service?
+ Answer: a Kubernetes resource for load balancing and providing a stable network endpoint for pods
+
+Q-55: In Kubernetes, what is the primary purpose of using labels and selectors?
+ Answer: categorizing and identifying resources, which enables grouping and querying
+
+Q-56: Why are open standards critical for developing and consuming cloud-native tools?
+ Answer: give developers confidence that the products will work as expected and will integrate well with other tools
+
+Q-57: Which of the following is NOT one of the major control plane services that run on every control plane node?
+ Answer: kubelet
+
+Q-58: Which of the following metrics can be monitored and collected by Prometheus? (select three)
+ Answer:
+ - disk latency
+ - CPU and memory utilization
+ - custom-application error rates
+
+

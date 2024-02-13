@@ -1,0 +1,25 @@
+- Metrics can also be scraped from containerized environments
+- Docker Engine Metrics
+- Container metrics using cAdvisor
+
+- Docker Engine Metrics
+  - Add this file: vi /etc/docker/daemon.json
+  {
+    "metrics-addr": "127.0.0.1:9323",
+    "experimental": true
+  }
+  - sudo systemctl restart docker
+  - curl localhost:9323/metrics
+
+
+- Docker Metrics vs cAdvisor Metrics
+  - Docker Metrics:
+    - How much cpu does docker use
+    - Total number of failed image builds
+    - Time to process container actions
+    - No metrics specific to a container
+  - cAdvisor Metrics:
+    - How much cpu/mem does each container use
+    - Number of processes running inside a container
+    - Container uptime
+    - Metrics on a per-container basis

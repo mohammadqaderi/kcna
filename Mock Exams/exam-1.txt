@@ -1,0 +1,232 @@
+Q-1: Which tool can be used to visualize and interact with data collected by Prometheus using the PromQL language?
+ Answer: Grafana
+
+Q-2: Among the different deployment strategies, which approach ensures both zero-downtime deployment and the
+ ability to immediately rollback in case of issues?
+ Answer: Blue-Green Deployment
+
+Q-3: In Kubernetes, which Higher Level construct is primarily responsible for managing the desired state of identical,
+ stateless pods and overseeing their lifecycle?
+ Answer: Deployment
+
+Q-4: Kubernetes follows an API pattern where a specific component acts as the central hub for communication.
+ Which Kubernetes component serves as the hub for API interactions and manages the overall control of the cluster?
+ Answer: API Server
+
+Q-5: In Kubernetes, what feature is utilized to retrieve a collection of objects based on a key/value pair?
+ Answer: Selectors
+
+Q-6: In Kubernetes, when considering network policies within a namespace, what is the default behavior regarding ingress
+ and egress traffic to and from pods if no policies are defined?
+ Answer: All ingress and egress traffic is allowed to and from pods in the namespace
+
+Q-7: Which container runtime, known for its emphasis on simplicity, robustness, and portability,
+ has become an industry standard?
+ Answer: ContainerD
+
+Q-8: Which CNCF project focuses on providing a unified framework for generating, managing, and analyzing logs, metrics,
+ and traces through a comprehensive set of tools, APIs, and SDKs?
+ Answer: OpenTelemetry
+
+Q-9: Within the realm of ensuring reliable and high-performance services, which technical role assumes the
+ responsibility of meticulously monitoring and upholding Service Level Agreements (SLAs), Service Level Indicators (SLIs),
+ and Service Level Objectives (SLOs)?
+ Answer: Site Reliability Engineer
+
+Q-10: In a Kubernetes YAML manifest file, which attribute controls the behavior of the kubelet when pulling a
+ specified container image?
+ Answer: ImagePullPolicy
+
+Q-11: Given the following SLI and SLO examples, what does the SLO value represent?
+ SLI: Latency
+ SLO: Latency < 100ms
+ Answer: The maximum allowable latency
+
+Q-12: In the evolving landscape of Kubernetes, what is the recommended successor to PodSecurityPolicies (PSP)
+ for enforcing fine-grained security policies?
+ Answer: Kubernetes Admission Controllers
+
+Q-13: Which two-layered approach does Kubernetes utilize for its autoscaling mechanism?
+ Answer: Pod-based scaling and cluster-based scaling
+
+Q-14: When it comes to securing Kubernetes, which two areas require careful attention and implementation of security measures?
+ Answer: application security and cluster component security
+
+Q-15: Which industry-standard specification enables seamless integration of diverse block and file storage systems with
+ container orchestration systems like Kubernetes?
+ Answer: Container Storage Interface (CSI)
+
+Q-16: Among the following features in Kubernetes, which one enables kubelet to seamlessly integrate with multiple
+ container runtimes without requiring recompilation of cluster components?
+ Answer: Container Runtime Interface (CRI)
+
+Q-17: To access the interactive shell of a container within a pod, which command or action is commonly used?
+ Answer: kubectl exec -it test-pod – /bin/bash
+
+Q-18: Which Kubernetes component is responsible for maintaining the desired state of the cluster and triggering actions
+ to reconcile any deviations?
+ Answer: kube-controller-manager
+
+Q-19: Which approach exposes cluster credentials outside the cluster, potentially posing security risks?
+ Answer: Push-based deployment approach
+
+Q-20: In Kubernetes, which component serves as the default Domain Name System (DNS) solution for service discovery and
+ name resolution within the cluster?
+ Answer: CoreDNS
+
+Q-21: In Kubernetes, which component serves as the default Domain Name System (DNS) solution for service discovery and
+ name resolution within the cluster?
+ Answer: Field Selector
+
+Q-22: In the context of containerized applications, which networking approach employs a Sidecar pattern, co-locating an
+ auxiliary container with the primary container, to handle port mapping and traffic management tasks?
+ Answer: Service Mesh
+
+Q-23: Which of the following are common Service Level Indicators (SLIs) used to measure the performance of a system?
+ Answer: All options are correct
+ - Saturation
+ - Request Latency
+ - Error rate
+
+Q-24: In Kubernetes, which storage API resource represents a distinct unit of storage in the cluster, provisioned either
+ by an administrator or dynamically provisioned using storage classes, and can be mounted as volumes in pods?
+ Answer: Persistent Volume
+
+Q-25: In Kubernetes, what are the fundamental units of deployment that encapsulate one or more containers and
+ their shared resources?
+ Answer: Pods
+
+Q-26: Within the collaborative landscape of Kubernetes, what defines Special Interest Groups (SIGs)?
+ Answer: Exclusive teams focusing on specific areas or domains of the project.
+
+Q-27: What is the name of the built-in query language used by Prometheus to query its stored metrics?
+ Answer: PromQL
+
+Q-28: Which monitoring solution is responsible for collecting and aggregating metrics?
+ Answer: Prometheus
+
+Q-29: Which monitoring solution is responsible for collecting and aggregating metrics?
+ Answer: Fission
+
+Q-30: In a Kubernetes cluster, which component is responsible for integrating the cluster with the API of the cloud provider,
+ enabling seamless interaction with cloud-specific resources and services?
+ Answer: cloud-controller-manager
+
+Q-31: Which Kubernetes distribution is specifically optimized for running a lightweight, single-node cluster for local
+ development on Windows, Linux, and macOS?
+ Answer: Minikube
+
+Q-32: Which Kubernetes distribution is specifically optimized for running a lightweight, single-node cluster for local
+ development on Windows, Linux, and macOS?
+ Answer: Vertical scaling involves increasing the resources allocated to each individual unit, such as CPU or memory,
+ while horizontal scaling focuses on adding more units or instances to the system.
+
+Q-33: Which approach in DevOps involves managing infrastructure changes by storing them as code in a version control repository,
+ followed by automated processes that deploy and update the infrastructure accordingly?
+ Answer: GitOps
+
+Q-34: Which feature in Kubernetes enables the segregation of resources into distinct groups within a single cluster?
+ Answer: Namespaces
+
+Q-35: In Kubernetes, when a developer needs to securely store and transmit sensitive cloud credentials to applications
+ running within a cluster, which component should be utilized to maintain the confidentiality of the credentials?
+ Answer: Secrets
+
+Q-36: Which kubectl command is used to create a Kubernetes deployment named “test-dep” with the nginx
+ image and configure it to have 3 replicas?
+ Answer: kubectl create deployment test-dep --image=nginx --replicas=3
+
+Q-37: When considering the 4C’s of cloud native security, what is the correct order, starting from the outermost
+ layer and progressing towards the innermost layer?
+ Answer: Cloud, Cluster, Container, Code
+
+Q-38: In order to achieve optimal resource utilization and meet variable load demands in a 24/7 production service,
+ which combination of features in Kubernetes can dynamically adjust the number of nodes in the cluster and the number
+ of pods in a deployment?
+ Answer: Horizontal Pod Autoscaler and cluster autoscaling
+
+Q-39: Which statement accurately describes the role and purpose of the Container Networking Interface (CNI) in Kubernetes?
+ Answer: A specification and libraries for writing plugins to configure network interfaces in Linux containers.
+
+Q-40: Which endpoint is typically used to access metrics on an HTTP server?
+ Answer: /metrics
+
+Q-41: Which of the following methods are used to attach additional descriptive information to Kubernetes objects?
+ Answer: Annotations, Labels
+
+Q-42: In the context of application deployment, which term refers to a self-contained software package that includes all
+ the necessary components and dependencies to run the application?
+ Answer: Container Image
+
+Q-43: Which of the following container runtimes is a lightweight, low-level runtime designed specifically for running
+ containers in Linux?
+ Answer: LXC
+
+Q-44: In the context of distributed tracing, which statement accurately describes the relationship between a trace and a span?
+ Answer: A trace consists of multiple spans that collectively represent a transaction, while a span refers to an
+ individual operation within a trace.
+
+Q-45: Which component in Kubernetes continuously monitors the state of the cluster, detects any deviations from the
+ desired state, and initiates or requests changes to ensure the cluster remains in the desired state?
+ Answer: Controller
+
+Q-46: In the domain of ensuring optimal system performance and reliability, what roles and tasks are typically
+ associated with a Site Reliability Engineer (SRE)?
+ Answer: All options are correct
+ - Enabling developers with secure and efficient access to logs, events, and performance metrics for effective troubleshooting and issue resolution.
+ - Designing and implementing automated incident response workflows to minimize response times and reduce human error.
+ - Mitigating service disruptions and restoring functionality during outages in underlying infrastructure services.
+
+Q-47: Which Kubernetes components play a pivotal role in mediating communication between the control plane
+ nodes and worker nodes in a cluster?
+ Answer: kube-proxy
+
+Q-48: The Role-Based Access Control (RBAC) API in Kubernetes encompasses the declaration of which four specific types
+ of objects that govern authorization within the cluster?
+ Answer: ClusterRoleBinding, ClusterRole, Role, RoleBinding
+
+Q-49: Which component in a Kubernetes cluster is responsible for managing the state of worker nodes and ensuring
+ their proper functioning?
+ Answer: Kubelet
+
+Q-50: What is the term for the process in Kubernetes that involves assigning pods to nodes based on their resource
+ requirements and constraints, ensuring that the kubelet can successfully run them?
+ Answer: Pod Scheduling
+
+Q-51: Which DevOps methodology involves managing infrastructure configurations declaratively through code and
+ applying changes by committing them to a version control repository?
+ Answer: Infrastructure as a code (Iac)
+
+Q-52: In Kubernetes, which component was specifically introduced to supersede the outdated ReplicationControllers?
+ Answer: Deployment
+
+Q-53: In Prometheus, what type of database is used to store the scraped metrics?
+ Answer: Time series database
+
+Q-54: What is the expanded form of the acronym CNCF, which represents a prominent organization driving the adoption
+ of cloud-native technologies?
+ Answer: Cloud Native Computing Foundation
+
+Q-55: Which kubectl command allows you to retrieve a list of all available API groups in a Kubernetes cluster?
+ Answer: kubectl api-versions
+
+Q-56: Which CNCF project provides a platform for distributed tracing, monitoring, and performance optimization in
+ microservices architectures?
+ Answer: Jaeger
+
+Q-57: What are the supported authorization mechanisms or modules in Kubernetes?
+ Answer: All options are correct
+ - Attribute-based access control(ABAC)
+ - Role-based access controls(RBAC)
+ - Webhooks
+
+Q-58: Which Kubernetes component enables developers to schedule jobs based on user-defined time intervals?
+ Answer: CronJobs
+
+Q-59: Which Kubernetes component enables developers to schedule jobs based on user-defined time intervals?
+ Answer: DaemonSet
+
+Q-60: Which tool is commonly used for advanced data visualization and analysis in conjunction with Prometheus for
+ monitoring and observability purposes?
+ Answer: Grafana
+

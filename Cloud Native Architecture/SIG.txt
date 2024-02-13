@@ -1,0 +1,21 @@
+SIG: Special Interest Group
+- It's a group of contributors who are responsible for managing specific areas of the project.
+- This allows for more streamlined development and a faster pace of innovation
+- SIG insures that the project remains organized and the different teams are not stepping on each other's toes.
+- Key tasks that SIG typically undertake:
+  - Code development
+  - Testing and validation
+  - Documentation
+  - Community outreach and education
+  - Release management
+  - Architecture and design
+
+- KEPS (Kuberenetes Enhancement Proposal Process) are used to propose changes to the kubernetes project to gather
+  feedback from the community.
+
+- SIG Cluster Lifecycle: is responsible for the creation, management, and upgrading of kubernetes clusters ensuring
+  that they are reliable.
+
+- SIG Storage: is responsible for kubernetes storage management.
+
+- SIG Network: is responsible for the networking functionality of kubernetes.
